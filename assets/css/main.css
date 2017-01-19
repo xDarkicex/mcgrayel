@@ -59,6 +59,7 @@ background: linear-gradient(to bottom,
 
 .header p a:hover{
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 .wave{
@@ -156,7 +157,7 @@ background: linear-gradient(to bottom,
 	text-shadow: 1px 1px 2px rgba(0,0,0,.4);
 	/*box-shadow: inset 1px 1px 3px rgba(0,0,0,.4);*/
 
-
+	cursor: pointer;
 	height:2.5em;
 	border:1px solid  #FFD758;
 
@@ -164,6 +165,7 @@ background: linear-gradient(to bottom,
 
 .nav button:hover > a{
 		color:black;
+		cursor: pointer;
 }
 /*
 ================
@@ -459,17 +461,53 @@ padding-right: 5px;
 	background:url(../images/arrow.png)no-repeat;
 
 }
-/*  #pdf-slider-container{
-    max-width: 300px;
-  }
 
-  #pdf-slider{
-    position: relative;
-    overflow: hidden;
+/*
+=================================
+layout stuff 2017
+=================================
+ */
 
-  }
-*/
+.col-lg-1 {
+	flex-grow: 1;
+	
+}
+.row-sm-4 {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+}
+.row-sm-4 .divider span{
+	width: 100%!important;
+}
+.row-sm-4 ul li {
+	display: flex;
+	justify-content: center;
+}
+.btn {
+	padding: 10px 40px;
+	margin: 5px;
+	border-radius: 5px;
+	color: white;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	
+}
 
+.btn-default {
+	background-color: #FFD758;
+	border: 1px solid;
+	border-color: #e1ab00;
+}
+
+.btn-default:hover {
+	background-color: #b79a3e;
+	border-color: #FFD758;
+	cursor: pointer;
+}
 
 /* AUTO PAUSE PLAY BUTTON */
 
@@ -623,16 +661,17 @@ input[type="checkbox"] + label span:hover {
 	background: #4172B2;
 	display: flex;
 	padding-top: 45px;
-	padding-right: 105px;
+	padding-right: 50px;
+	padding-left: 50px;
 	justify-content: space-around;
 }
 
-.news{
+.col-md-3{
 	flex-grow:1;
+	min-height: 200px;
 
 }
-
-.news h1{
+.heading{
 	padding-bottom: 30px;
 	color: white;
 	font-family: 'Roboto', sans-serif;
@@ -640,7 +679,7 @@ input[type="checkbox"] + label span:hover {
 }
 
 .news p{
-	padding-bottom: 15px;
+	padding-bottom: 90px;
 	line-height: 25px;
 }
 
@@ -652,28 +691,39 @@ input[type="checkbox"] + label span:hover {
 
 .news a:hover{
 	color:#FFD758;
+	cursor: pointer;
 }
 
 .news .divider span{
 	width:100%;
 }
+.international {
+	padding-left: 20px;
+}
+.international p{
+	padding-bottom: 115px;
+	line-height: 25px;
+}
 
+.international a{
+	text-decoration: none;
+	color:white;
+	transition: color 0.2s linear;
+}
+.international a:hover{
+	color:#FFD758;
+	cursor: pointer;
+}
 
 .contact{
-	flex-grow:1;
 	padding-left: 2%;
+	min-width: 160px;
 }
 
 .hide{
 		display: none;
 		}
 
-.contact h1{
-	padding-bottom: 30px;
-	color: white;
-	font-family: 'Roboto', sans-serif;
-
-}
 
 .contact p{
 
@@ -687,6 +737,7 @@ input[type="checkbox"] + label span:hover {
 
 .contact a:hover{
 		text-decoration: underline;
+		cursor: pointer;
 }
 .footer{
 	height: 60px;
@@ -748,8 +799,7 @@ Slide Menu
 	width: 300px;
 	left:365px;
 	z-index: 1;
-
-			-webkit-animation: bounce 1s cubic-bezier(0.22, 0.61, 0.86, 0.24);
+	-webkit-animation: bounce 1s cubic-bezier(0.22, 0.61, 0.86, 0.24);
 	-moz-animation: bounce 1s cubic-bezier(0.22, 0.61, 0.86, 0.24);
 	-o-animation: bounce 1s cubic-bezier(0.22, 0.61, 0.86, 0.24);
 	animation: bounce 1s cubic-bezier(0.22, 0.61, 0.86, 0.24);
@@ -808,6 +858,7 @@ Slide Menu
 
 .menu-wrapper ul li a:hover {
 	color: #fff;
+	cursor: pointer;
 }
 
 .top-menu{
@@ -823,32 +874,40 @@ Rainbow menu
 
 .ahover:hover{
 	background: #02858E!important;
+	cursor: pointer;
 }
 
 .bhover:hover{
 	background: #A252A0!important;
+	cursor: pointer;
 }
 
 .phover:hover{
 	background: #3061AA!important;
+	cursor: pointer;
 }
 
 .pwhover:hover{
    background: 	linear-gradient(to top,
                     rgba(152,55,148, 1),
                     rgba(190,77,30, 1) 90%)!important;;
+  cursor: pointer;
 }
 .sphover:hover{
  background: #B93261!important;
+ cursor: pointer;
 }
 .sthover:hover{
 	background: #511A02!important;
+	cursor: pointer;
 }
 .fhover:hover{
 	background: #1D5F89!important;
+	cursor: pointer;
 }
 .prhover:hover{
 	background: #23977C!important;
+	cursor: pointer;
 }
 
 
@@ -943,6 +1002,7 @@ display:none;
 	width: 1024px;
 	height: 45px;
 	background-color: #FFD758;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 	position: absolute;
 	top: 15.6em;
 	left: 0;
@@ -974,6 +1034,7 @@ display:none;
 
 .top-menu ul li a:hover{
 	background-color: #e1ab00;
+	cursor: pointer;
 
 }
 
@@ -1148,7 +1209,7 @@ transition: .3s all ease-in-out; background: #dfdfdf;
 }
 [material][raised]:not([disabled]):hover,
 [material][raised]:not([disabled]):active
-{ box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 10px 5px rgba(0, 0, 0, 0.22); }
+{ box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 10px 5px rgba(0, 0, 0, 0.22);cursor: pointer; }
 
 [material][raised][colored] { color: #fff; background: #4285f4; }
 
