@@ -111,33 +111,33 @@ $('.pdf-slider-container').on({
 });
 
 $('.main-bottle-container div:nth-child(1)').on('click', function(){
-  window.location = "http://www.easycarewater.com/algatec.html";
+  window.location = "http://mcgrayel.com/algatec.html";
 });
 
 $('.main-bottle-container div:nth-child(2)').on('click', function(){
-  window.location = "http://www.easycarewater.com/beautec.html";
+  window.location = "http://mcgrayel.com/beautec.html";
 });
 
 $('.main-bottle-container div:nth-child(3)').on('click', function(){
-  window.location = "http://www.easycarewater.com/pooltec.html";
+  window.location = "http://mcgrayel.com/pooltec.html";
 });
 
 $('.main-bottle-container div:nth-child(4)').on('click', function(){
-  window.location = "http://www.easycarewater.com/pooltec_winter.html";
+  window.location = "http://mcgrayel.com/pooltec_winter.html";
 });
 
 $('.main-bottle-container div:nth-child(5)').on('click', function(){
-  window.location = "http://www.easycarewater.com/scaletectplus.html";
+  window.location = "http://mcgrayel.com/scaletectplus.html";
 });
 
 $('.main-bottle-container div:nth-child(6)').on('click', function(){
-  window.location = "http://www.easycarewater.com/startuptec.html";
+  window.location = "http://mcgrayel.com/startuptec.html";
 });
 
 $('.main-bottle-container div:nth-child(7)').on('click', function(){
-  window.location = "http://www.easycarewater.com/fountec.html";
+  window.location = "http://mcgrayel.com/fountec.html";
 });
 
 $('.main-bottle-container div:nth-child(8)').on('click', function(){
-  window.location = "http://www.easycarewater.com/protec.html";
+  window.location = "http://mcgrayel.com/protec.html";
 });
