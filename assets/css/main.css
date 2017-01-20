@@ -138,7 +138,7 @@ background: linear-gradient(to bottom,
 		margin-right: .3em;
 		margin-left: .3em;
 /*		background-color:#FFD758;*/
-		border:1px solid  #FFD758;
+		border:1px solid  #fbbf00;
 
 	}
 .nav button a{
@@ -153,18 +153,18 @@ background: linear-gradient(to bottom,
 }
 
 .nav button:hover{
-	background-color:#FFD758;
+	background-color:#fbbf00;
 	text-shadow: 1px 1px 2px rgba(0,0,0,.4);
 	/*box-shadow: inset 1px 1px 3px rgba(0,0,0,.4);*/
 
 	cursor: pointer;
 	height:2.5em;
-	border:1px solid  #FFD758;
+	border:1px solid  #fbbf00;
 
 }
 
 .nav button:hover > a{
-		color:black;
+		color:#fff;
 		cursor: pointer;
 }
 /*
@@ -372,6 +372,7 @@ padding-right: 5px;
 
  .slide-flex-group{
  	display: flex;
+	 margin-top: 20px;
  }
 
  .slide-flex-item{
@@ -380,17 +381,15 @@ padding-right: 5px;
  }
 
  .slide-flex-item div{
-   justify-content: space-around;
    display: flex;
    flex-direction: column;
 
  }
 
  .slide-flex-item>div{
-      padding: 20px;
-      padding-left:80px;
+      padding: 10px;
+      padding-left:10px;
       text-align: center;
-      justify-content: center;
       align-items: center;
  }
 
@@ -404,8 +403,13 @@ padding-right: 5px;
 
   }
 
+  .slide-list {
+	  margin-left: 10px;
+	  padding: 20px;
+  }
   .slide-flex-item:nth-child(2) div .slide-list{
         background: rgba(0,0,0, 0.5);
+		max-width: 300px;
   }
 
  .bottle-holder img {
@@ -413,6 +417,7 @@ padding-right: 5px;
    height: 180px;
  }
 .fake-vid{
+ margin-left: 10px;
   width:360px;
   height:250px;
   background: #222;
@@ -468,15 +473,37 @@ layout stuff 2017
 =================================
  */
 
+.heading-lg {
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	padding-bottom: 15px;
+	font-size: 2em;
+	align-self: center;
+}
+.heading-sm {
+	font-size: 1em;
+	align-self: center;
+}
+
 .col-lg-1 {
 	flex-grow: 1;
 	
+}
+.col-sm-2 {
+	width: 25%;
+}
+.col-sm-3{
+	width: 75%;
+}
+.row-lg-2 {
+	display: flex;
+    align-items: center;
 }
 .row-sm-4 {
 	display: flex;
 	flex-grow: 1;
 	flex-direction: column;
-	align-items: center;
+	/*align-items: center;*/
 	padding: 10px;
 }
 .row-sm-4 .divider span{
@@ -484,7 +511,7 @@ layout stuff 2017
 }
 .row-sm-4 ul li {
 	display: flex;
-	justify-content: center;
+	/*justify-content: center;*/
 }
 .btn {
 	padding: 10px 40px;
@@ -498,14 +525,14 @@ layout stuff 2017
 }
 
 .btn-default {
-	background-color: #FFD758;
+	background-color: #fbbf00;
 	border: 1px solid;
-	border-color: #e1ab00;
+	border-color: rgba(61, 46, 0,0.8);
 }
 
 .btn-default:hover {
 	background-color: #b79a3e;
-	border-color: #FFD758;
+	border-color: #fbbf00;
 	cursor: pointer;
 }
 
@@ -690,7 +717,7 @@ input[type="checkbox"] + label span:hover {
 }
 
 .news a:hover{
-	color:#FFD758;
+	color:#fbbf00;
 	cursor: pointer;
 }
 
@@ -711,7 +738,7 @@ input[type="checkbox"] + label span:hover {
 	transition: color 0.2s linear;
 }
 .international a:hover{
-	color:#FFD758;
+	color:#fbbf00;
 	cursor: pointer;
 }
 
@@ -787,7 +814,7 @@ Slide Menu
 	/*left: 205px;*/
 	left: 205px;
 	z-index: 1;
-	background-color: #FFD758;
+	background-color: #fbbf00;
 	border-top-left-radius: 20px;
 	border-bottom-left-radius: 20px;
 	transition: left 0.3s ease-in-out;
@@ -814,7 +841,7 @@ Slide Menu
 	width: 64px;
 	height: 500px;
 	cursor: pointer;
-	background-color: #FFD758;
+	background-color: #fbbf00;
 	border-top-left-radius: 20px;
 	border-bottom-left-radius: 20px;
 	border-right:1px solid #e1ab00;
@@ -1001,7 +1028,7 @@ display:none;
 	display: inline-block;
 	width: 1024px;
 	height: 45px;
-	background-color: #FFD758;
+	background-color: #fbbf00;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 	position: absolute;
 	top: 15.6em;
@@ -1022,7 +1049,7 @@ display:none;
 	display: block;
 	text-decoration: none;
 	font-family: 'Roboto', sans-serif;
-	color: white;
+	color: #fff;
 	line-height: 45px;
 	width: 122px;
 

@@ -41,7 +41,6 @@ function slidePrev(){
   $images.hide("slide", { direction: "right" }, 1000);
   $($images[sliderIndex]).show("slide", { direction: "left" }, 1000);
 }
-
 function validate() {
   if (document.getElementById('remember').checked) {
     refreshIntervalId = window.setInterval(next, 5000);
@@ -63,15 +62,16 @@ $(document).ready(function(){
   validate();
 });
 
+
+//This function Pauses Slider Good for old people...
 $('.slider').on({
    mouseenter: function() {
        window.clearInterval(refreshIntervalId)
     refreshIntervalId = null;
-    console.log("im in slider");
     },
     mouseleave: function() {
         refreshIntervalId = window.setInterval(next, 5000);
-        console.log("im out of slider");
+        
     }
 })
 
@@ -79,6 +79,7 @@ $('.slider').on({
 
 var pdfINDEX = 0;
 var slides = $('#pdf-slider').children();
+// Gah dynamic typing JAVASCRIPT SUCKS, this should all be remade in typescript...
 var forceNext;
 console.log(slides + "slide numb");
 
@@ -110,6 +111,11 @@ $('.pdf-slider-container').on({
     }
 });
 
+function fuckIt() {
+
+}
+
+//All of this is horrible!! bad way to make links
 $('.main-bottle-container div:nth-child(1)').on('click', function(){
   window.location = "http://mcgrayel.com/algatec.html";
 });
