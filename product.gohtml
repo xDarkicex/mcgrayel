@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<title>ECP | {{.name}}</title>
+<meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+	<link rel="icon" href="../static/assets/images/favicon.png" type="image/png">
+<link rel="stylesheet" type="text/css" href="../static/assets/css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Gentry Rolofson">
+<meta name="copyright" content="Mcgrayel Co">
+<link rel="stylesheet" type="text/css" href="../static/assets/css/basic.css">
+<link rel="stylesheet" type="text/css" href="../static/assets/css/reset.css">
+
+<script type="text/javascript">
+	
+	
+</script>
+</head>
+<body>
+<div class="bg"></div>
+<div Class="wrapper">
+	<div class="header">
+		<div class="logo"></div>
+		<div class="fade-container">
+			<div class="box fade-in one"></div>
+			<div class="box fade-in two"></div>
+			<div class="box fade-in three"></div>
+			<div class="box fade-in four"></div>
+			<div class="box fade-in five"></div>
+			<div class="box fade-in six"></div>
+			<div class="box fade-in seven"></div>
+			<div class="box fade-in eight"></div>
+			<div class="box fade-in nine"></div>
+			<div class="box fade-in ten"></div>
+			<div class="box fade-in eleven"></div>
+			<div class="box fade-in twelve"></div>
+			<div class="box fade-in thirteen"></div>
+			<div class="box fade-in fourteen"></div>
+			<div class="box fade-in fifteen"></div>
+			<div class="box fade-in sixteen"></div>
+			<div class="box fade-in seventeen"></div>
+			<div class="box fade-in eightteen"></div>
+			<div class="box fade-in nineteen"></div>
+			<div class="box fade-in twenty"></div>
+			<div class="box fade-in twentyone"></div>
+			<div class="box fade-in twentytwo"></div>
+			<div class="box fade-in twentythree"></div>
+			<div class="box fade-in twentyfour"></div>
+		</div>
+<div class="wave wavefade-in"></div>
+<section class="contact-top">
+<p><span class="hide">  </span>  <a href="tel:5592997660" class="bold">559-299-7660</a> | <a href="mailto:#">Support</a> | <span class="lang"><select><option>Language</option><option>English</option><option>French</option><option>portuguese</option><option>Spanish</option></select></span></p>
+</section>
+<div class="nav">
+<button material><a href="/">Home</a></button>
+<button material><a href="#">Store Locator</a></button>
+<button material><a href="#">About Us</a></button>
+<button material><a href="#">Order</a></button>
+<button material><a href="#">Contact Us</a></button>
+
+</div><!-- End Nav -->
+</div><!-- End Header -->
+<div class="content">
+<div class="company-name-container"></div><!-- end company name -->
+	<div class="flexBreak">
+		<div class="divider"><span></span></div><!-- Span Line Break page -->
+	</div>
+	<div class="col-lg">
+		<div clas="main-image">
+			<div class="image"><img src="../static/assets/images/{{.name}}.jpg"></div>
+		</div><!-- End Main Image Box -->
+		<div class="product-bullets">
+			<div class="title"><h1>{{.name}}® Features</h1></div>
+			<p>{{.tag}}</p>
+			<div class="divider"><span></span></div>
+			<ul>
+				{{ range $key, $value := .points }}
+				<li>{{ $value }}</li>
+			{{ end }}
+			</ul>
+		</div>
+	</div>
+</div><!-- End top content -->
+
+<!-- End Product Bullet points -->
+<div class="bottom-content">
+<div class="title"><h1>{{.name}}®</h1></div><!-- Product Title -->
+<div class="divider"><span></span></div>
+<div class="overview">
+<div class="article">
+<h3>"Product Summary"</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div><!-- End Article -->
+</div><!-- End Overview -->
+<div class="divider"><span></span></div>
+<div class="product-placeholder"></div>
+<div class="title"><h1>"Technical Details HERE"</h1></div><!-- Product Title -->
+<div class="divider"><span></span></div>
+<div class="overview">
+<div class="article">
+<h3>"Product Techniqual Details"</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div><!-- End Article -->
+</div><!-- End Overview -->
+	<div class="divider"><span></span></div>
+	<div class="product-placeholder"></div>
+</div><!-- End bottom content -->
+
+
+<div class="footer">
+<p>Mcgrayel Company© 1978-2017</p><p><a href="http://easycarewater.com">http://easycarewater.com</a></p>
+</div><!-- End Footer -->
+
+</div><!-- End Wrapper-->
+
+	<div class="slide-handler"></div>
+	<div class="menu-wrapper">
+	<div class="menu-arrow">
+		<img src="../static/assets/images/back.png" class="arrow-img">
+	</div>
+		<ul>
+			<li class="item11"><a class="ahover" href="http://mcgrayel.com/algatec.html">Algatec<span>®</span></a></li>
+			<li class="item12"><a class="bhover" href="http://mcgrayel.com/beautec.html">Beautec<span>®</span></a></li>
+			<li class="item13"><a class="phover" href="http://mcgrayel.com/pooltec.html">Pooltec<span>®</span></a></li>
+			<li class="item14"><a class="pwhover" href="http://mcgrayel.com/pooltec_winter.html">Pooltec Winter<span>®</a></li>
+			<li class="item15"><a class="sphover" href="http://mcgrayel.com/scaletecplus.html">Scaleec Plus<span>®</span></a></li>
+			<li class="item16"><a class="sthover" href="http://mcgrayel.com/startuptec.html">Startup-Tec<span>®</span></a></li>
+			<li class="item17"><a class="fhover" href="http://mcgrayel.com/fountec.html">Fountec<span>®</span></a></li>
+			<li class="item18"><a class="prhover" href="http://mcgrayel.com/protec.html">Protec<span>®</span></a></li>
+		</ul>
+	</div>
+
+<div class="top-menu">
+		<ul>
+			<li class="item11"><a class="ahover" href="http://mcgrayel.com/algatec.html">Algatec<span>®</span></a></li>
+			<li class="item12"><a class="bhover" href="http://mcgrayel.com/beautec.html">Beautec<span>®</span></a></li>
+			<li class="item13"><a class="phover" href="http://mcgrayel.com/pooltec.html">Pooltec<span>®</span></a></li>
+			<li class="item14"><a class="pwhover" href="http://mcgrayel.com/pooltec_winter.html">Pooltec Winter<span>®</a></li>
+			<li class="item15"><a class="sphover" href="http://mcgrayel.com/scaletecplus.html">Scaleec Plus<span>®</span></a></li>
+			<li class="item16"><a class="sthover" href="http://mcgrayel.com/startuptec.html">Startup-Tec<span>®</span></a></li>
+			<li class="item17"><a class="fhover" href="http://mcgrayel.com/fountec.html">Fountec<span>®</span></a></li>
+			<li class="item18"><a class="prhover" href="http://mcgrayel.com/protec.html">Protec<span>®</span></a></li>
+		</ul>
+	</div>
+
+
+
+<div class="hide">Icons made by <a href="http://www.flaticon.com/authors/rami-mcmin" title="Rami McMin">Rami McMin</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+<script src="../static/assets/js/ripple.js" async></script>
+<script src="../static/assets/js/toggle.js" async></script>
+<script src="../static/assets/js/animate.js"></script>
+<script type="text/javascript">
+var today = new Date();
+console.log("Todays Date: ",today)
+
+
+
+</script>
+</body>
+</html>

@@ -88,6 +88,10 @@ background: linear-gradient(to bottom,
 .logo img{
 	width: 350px;
 }
+.col-lg{
+	display: flex;
+	justify-content: space-around;
+}
 
 .contact-top{
 	position: absolute;
@@ -619,24 +623,19 @@ input[type="checkbox"] + label span:hover {
 .topcontent{
 	width:100%;
 }
-.imgbox{
-
-	float:left;
-	height:22em;
-	width: 25%;
-	padding-left: 25px;
-	padding-right: 25px;
-	margin-bottom: 60px;
-	margin-left: 20px;
+.image{
+	padding: 25px;
+}
+.image > img {
+	max-height: 400px;
 }
 .product-placeholder{
 	height: 150px;
 }
 
 .product-bullets{
-	float:right;
-	width:60%;
 	padding-top: 20px;
+	color: black;
 
 }
 .button{
