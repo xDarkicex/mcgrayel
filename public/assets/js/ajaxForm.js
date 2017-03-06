@@ -48,7 +48,7 @@ window.onload = function() {
     }
   }
 
-  document.querySelector('.addSellingPoints').onclick = function(e) {
+  document.querySelector('.addSellingPoint').onclick = function(e) {
     e.preventDefault();
     var wrapper = document.querySelector('.sellingPoints');
     var label = document.createElement('label');
@@ -59,7 +59,7 @@ window.onload = function() {
     wrapper.appendChild(label);
   }
 
-  document.querySelector('.removeSellingPoints').onclick = function(e) {
+  document.querySelector('.removeSellingPoint').onclick = function(e) {
     e.preventDefault();
     var wrapper = document.querySelector('.sellingPoints');
     if (wrapper.childElementCount > 1) {

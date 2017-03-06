@@ -136,7 +136,7 @@ ol{
 #placeholder{
 	height:5em;
 }
-.nav{
+.navMaterial{
 	position: absolute;
 	z-index: 100;
 	margin-left:-13.5%;
@@ -147,7 +147,7 @@ ol{
 
 	}
 
-.nav button{
+.navMaterial button{
 
 		/*width:6em;
 		height:2.4em;*/
@@ -168,7 +168,7 @@ ol{
 		border:1px solid  #fbbf00;
 
 	}
-.nav button a{
+.navMaterial button a{
 		font-family: 'Roboto', sans-serif;
 		color: white;
 		text-transform: uppercase;
@@ -179,7 +179,7 @@ ol{
 
 }
 
-.nav button:hover{
+.navMaterial button:hover{
 	background-color:#fbbf00;
 	text-shadow: 1px 1px 2px rgba(0,0,0,.4);
 	/*box-shadow: inset 1px 1px 3px rgba(0,0,0,.4);*/
@@ -190,7 +190,7 @@ ol{
 
 }
 
-.nav button:hover > a{
+.navMaterial button:hover > a{
 		color:#fff;
 		cursor: pointer;
 }
@@ -512,8 +512,40 @@ layout stuff 2017
 	margin-top: 25px!important;
 }
 fieldset label {
+	font-family: sans-serif;
+	margin-bottom: 10px;
 	display: flex;
 	flex-direction: column;
+}
+fieldset input {
+	margin-top: 10px;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.2);
+}
+fieldset button {
+	  padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+		background: #0099cc;
+    color: #ffffff;
+}
+
+fieldset button:focus, button:active:focus, button.active:focus {
+    outline: 0 none;
+}
+
+fieldset button:hover, button:active:hover {
+	background: #0180ab;
+}
+
+fieldset .removePoint, .removeBenefit, .removeFeature, .removeSellingPoint {
+	background: red;
+}
+fieldset .removePoint:hover, .removeBenefit:hover, .removeFeature:hover, .removeSellingPoint:hover {
+	background: darkred;
 }
 .col{
 	flex-direction: row;
@@ -1145,7 +1177,7 @@ display:none;
 		right: 5%;
 		top:5px;
 	}
-	.nav{
+	.navMaterival{
 		display: none;
 	}
 		.slide-buttons .Next{
