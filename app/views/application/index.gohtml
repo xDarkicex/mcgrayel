@@ -25,34 +25,7 @@
 
 
 <div class="header">
-<div class="logo"></div>
-<div class="fade-container">
-<div class="box fade-in one"></div>
-<div class="box fade-in two"></div>
-<div class="box fade-in three"></div>
-<div class="box fade-in four"></div>
-<div class="box fade-in five"></div>
-<div class="box fade-in six"></div>
-<div class="box fade-in seven"></div>
-<div class="box fade-in eight"></div>
-<div class="box fade-in nine"></div>
-<div class="box fade-in ten"></div>
-<div class="box fade-in eleven"></div>
-<div class="box fade-in twelve"></div>
-<div class="box fade-in thirteen"></div>
-<div class="box fade-in fourteen"></div>
-<div class="box fade-in fifteen"></div>
-<div class="box fade-in sixteen"></div>
-<div class="box fade-in seventeen"></div>
-<div class="box fade-in eightteen"></div>
-<div class="box fade-in nineteen"></div>
-<div class="box fade-in twenty"></div>
-<div class="box fade-in twentyone"></div>
-<div class="box fade-in twentytwo"></div>
-<div class="box fade-in twentythree"></div>
-<div class="box fade-in twentyfour"></div>
-</div>
-<div class="wave wavefade-in"></div>
+{{template "fadein"}}
 <section class="contact-top">
 <p><span class="hide">  </span>  <a href="tel:5592997660" class="bold">559-299-7660</a> | <a href="mailto:#">Support</a> | <span class="lang"><select><option>Language</option><option>English</option><option>French</option><option>portuguese</option><option>Spanish</option></select></span></p>
 </section>
@@ -93,28 +66,28 @@
 
 				<div class="main-bottle-container">
 					<div>
-						<img src="static/assets/images/algatecbottle.png">
+						<img src="static/assets/images/algatec.png">
 					</div>
 					<div>
-						<img src="static/assets/images/beautecbottle.png">
+						<img src="static/assets/images/beautec.png">
 					</div>
 					<div>
-						<img src="static/assets/images/pooltecbottle.png">
+						<img src="static/assets/images/pooltec.png">
 					</div>
 					<div>
-						<img src="static/assets/images/pooltecwbottle.png">
+						<img src="static/assets/images/pooltec-winter.png">
 					</div>
 					<div>
-						<img src="static/assets/images/scaletecbottle.png">
+						<img src="static/assets/images/scaletec.png">
 					</div>
 					<div>
 						<img src="static/assets/images/startuptec.png">
 					</div>
 					<div>
-						<img src="static/assets/images/fountecbottle.png">
+						<img src="static/assets/images/fountec.png">
 					</div>
 					<div>
-						<img src="static/assets/images/protecbottle.png">
+						<img src="static/assets/images/protec.png">
 					</div>
 				</div>
 
@@ -131,7 +104,7 @@
 						</div>
 						<div class="slide-flex-item flex-slide-2">
 							<div>
-								<div class="bottle-holder"><img src="static/assets/images/algatecbottle.png"></div>
+								<div class="bottle-holder"><img src="static/assets/images/algatec.png"></div>
 									<div class="slide-list">
 										<ol>
 											<li>Kills and Controls all algae, green, yellow and black.</li>
@@ -178,7 +151,7 @@
 
 		<div class="pdf-slide pdf2">
 			<div><h1>BEAUTEC BROCHURE</h1><p>Superior Scale and Stain Controller.</p>
-				<a href="http://easycarewater.com/files/Beautec%20-%20front%20side%20-%20Jan%202012%20web.pdf"><img src="static/assets/images/beautec.jpg"></a>
+				<a href="http://easycarewater.com/files/Beautec%20-%20front%20side%20-%20Jan%202012%20web.pdf"><img src="static/assets/images/beautecflier.jpg"></a>
 			</div>
 		</div>
 
@@ -205,7 +178,7 @@
 </div>
 <div class="international col-md-3">
 	<h1 class="heading">INTERNATIONAL</h1>
-	<p><a href="international.html">International Page</a></p>
+	<p><a href="international">International Page</a></p>
 	<div class="divider"><span></span></div><!-- Span Line Break page -->
 </div>
 <div class="contact col-md-3">
@@ -241,64 +214,34 @@
 	<div class="menu-arrow">
 		<img src="../static/assets/images/back.png" class="arrow-img">
 	</div>
-		<ul>
-			<li class="item11"><a class="ahover" href="http://mcgrayel.com/algatec.html">Algatec<span>®</span></a></li>
-			<li class="item12"><a class="bhover" href="http://mcgrayel.com/beautec.html">Beautec<span>®</span></a></li>
-			<li class="item13"><a class="phover" href="http://mcgrayel.com/pooltec.html">Pooltec<span>®</span></a></li>
-			<li class="item14"><a class="pwhover" href="http://mcgrayel.com/pooltec_winter.html">Pooltec Winter<span>®</a></li>
-			<li class="item15"><a class="sphover" href="http://mcgrayel.com/scaletecplus.html">Scaleec Plus<span>®</span></a></li>
-			<li class="item16"><a class="sthover" href="http://mcgrayel.com/startuptec.html">Startup-Tec<span>®</span></a></li>
-			<li class="item17"><a class="fhover" href="http://mcgrayel.com/fountec.html">Fountec<span>®</span></a></li>
-			<li class="item18"><a class="prhover" href="http://mcgrayel.com/protec.html">Protec<span>®</span></a></li>
-		</ul>
+	{{template "menu"}}
 	</div>
 
 <div class="top-menu">
-		<ul>
-			<li class="item11"><a class="ahover" href="http://mcgrayel.com/algatec.html">Algatec<span>®</span></a></li>
-                        <li class="item12"><a class="bhover" href="http://mcgrayel.com/beautec.html">Beautec<span>®</span></a></li>
-                        <li class="item13"><a class="phover" href="http://mcgrayel.com/pooltec.html">Pooltec<span>®</span></a></li>
-                        <li class="item14"><a class="pwhover" href="http://mcgrayel.com/pooltec_winter.html">Pooltec Winter<span>®</a></li>
-                        <li class="item15"><a class="sphover" href="http://mcgrayel.com/scaletecplus.html">Scaleec Plus<span>®</span></a></li>
-                        <li class="item16"><a class="sthover" href="http://mcgrayel.com/startuptec.html">Startup-Tec<span>®</span></a></li>
-                        <li class="item17"><a class="fhover" href="http://mcgrayel.com/fountec.html">Fountec<span>®</span></a></li>
-                        <li class="item18"><a class="prhover" href="http://mcgrayel.com/protec.html">Protec<span>®</span></a></li>
-		</ul>
+	{{template "menu"}}
 	</div>
 
 
 <div class="hide">
-<div>Icons made by <a href="http://www.flaticon.com/authors/bogdan-rosu" title="Bogdan Rosu">Bogdan Rosu</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
-<div>Icons made by <a href="http://www.flaticon.com/authors/google" title="Google">Google</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
-
-<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
-
+{{template "hide"}}
 </div><!--
 <script src="assets/js/ripple.js" async></script> -->
-<script src="static/assets/js/toggle.js"></script>
-<script src="static/assets/js/slider.js"></script>
-<script src="static/assets/js/animate.js"></script>
-<script src="static/assets/js/jquery.simplemodal.js"></script>
-<script src="static/assets/js/basic.js" async></script>
-<script type="text/javascript">
-
-var today = new Date();
-console.log("Todays Date: ",today);
-
-</script>
-
-
+{{template "scripts"}}
 
 </body>
 
 <!-- FACEBOOK SDK -->
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script type="text/javascript">(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+	var today = new Date();
+	console.log("Todays Date: ",today);
+}(document, 'script', 'facebook-jssdk'));
+
+</script>
 
 </html>

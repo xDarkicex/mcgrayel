@@ -17,7 +17,30 @@ background: linear-gradient(to bottom,
 	background-image: url(../images/bluewater.jpg);
 
 }
+.body{
+	min-height: 100vh;
+}
+h2{
+	  font-size: 1.4em!important;
+    padding-bottom: 1em!important;
+		font-family: sans-serif!important;
+}
+ol li .lead {
+	text-indent: 0.2em;
+}
 
+ol{
+	  margin-left: 3em!important;
+}
+
+.lead {
+	  margin-bottom: 21px;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.4;
+		font-family: sans-serif;
+		text-indent: 2em;
+}
 
 .wrapper{
 	opacity: 1 !important;
@@ -189,19 +212,16 @@ BODY
 
 
 }
-    .divider{
+.divider{
+	padding-bottom:5px;
+	width:100%;
+}
 
-    padding-bottom:5px;
-    width:100%;
-
-
-    }
-
-    .divider span {
-    display: inline-block;
-    background-color: #d0d0d0;
-    height: 1px;
-    width: 85%;
+.divider span {
+	display: inline-block;
+	background-color: #d0d0d0;
+	height: 1px;
+	width: 100%;
 }
 
 .content{
@@ -488,7 +508,23 @@ layout stuff 2017
 	font-size: 1em;
 	align-self: center;
 }
+.body{
+	margin-top: 25px!important;
+}
+fieldset label {
+	display: flex;
+	flex-direction: column;
+}
+.col{
+	flex-direction: row;
+	width: 75%;
+}
 
+.col > h1 {
+	font-family: sans-serif!important;
+	font-size: 1.8em!important;
+	text-align: center;
+}
 .col-lg-1 {
 	flex-grow: 1;
 	
@@ -502,6 +538,10 @@ layout stuff 2017
 .row-lg-2 {
 	display: flex;
     align-items: center;
+}
+.row-lg-12 {
+	display: flex;
+  justify-content: center;
 }
 .row-sm-4 {
 	display: flex;
