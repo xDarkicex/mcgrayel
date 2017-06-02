@@ -4,24 +4,22 @@ import (
 	"flag"
 	"log"
 	"net/http"
-	"github.com/xDarkicex/mcgrayel/datastore"
+
 	"github.com/xDarkicex/mcgrayel/server"
-
-	mgo "gopkg.in/mgo.v2"
 )
 
-var (
-	session *mgo.Session
-)
+// var (
+// 	session *mgo.Session
+// )
 
-func init() {
-	// Dial mongo Datastore
-	err := datastore.Dial()
-	if err != nil {
-		log.Fatal(err)
-	}
-	session = datastore.GetSession()
-}
+// func init() {
+// 	// Dial mongo Datastore
+// 	err := datastore.Dial()
+// 	if err != nil {
+// 		log.Fatal(err)
+// 	}
+// 	session = datastore.GetSession()
+// }
 
 // var goHTML *template.Template
 
@@ -53,7 +51,8 @@ func init() {
 // 	}
 // }
 var Server *server.Server
-func init(){
+
+func init() {
 	Server = server.Initialize()
 }
 
