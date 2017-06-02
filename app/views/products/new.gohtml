@@ -9,6 +9,7 @@
 <section class="contact-top">
 <p><span class="hide">  </span>  <a href="tel:5592997660" class="bold">559-299-7660</a> | <a href="mailto:#">Support</a> | <span class="lang"><select><option>Language</option><option>English</option><option>French</option><option>portuguese</option><option>Spanish</option></select></span></p>
 </section>
+
 {{template "nav"}}
 </div><!-- End Header -->
 <div class="content">
@@ -21,8 +22,16 @@
     <div class="row-lg-12">
       <div class="col">
         <h1>Add New Product to EasyCareWater.com</h1>
-        <div class="divider"><span></span></div><!-- Span Line Break page -->
-        <form method="post" action="../product/new">
+        <form method="post" action="../product/new" id="form">
+          <div class="form-group">
+            <fieldset>
+              <label>Image</label>
+              <input type="file" class="form-control" />
+            </fieldset>
+          </div>
+        </form>
+        <!--
+        <form method="post" action="../product/new" id="form">
           <fieldset>
             <label>
               Image
@@ -41,7 +50,7 @@
               <label>
                 <p>
                   <button class="addPoint">Add Key Point</button>
-                  <button class="removePoint"><i class="fa fa-close"></i></button>
+                  <button class="removePoint">X</button>
                 </p>
                 <input type="text" name="points">
               </label>
@@ -58,7 +67,7 @@
               <label>
                 <p>
                   <button class="addFeature">Add Feature</button>
-                  <button class="removeFeature"><i class="fa fa-close"></i></button>
+                  <button class="removeFeature">X</button>
                 </p> 
                 <input type="text" name="features">
               </label>
@@ -67,7 +76,7 @@
               <label>
                 <p>
                   <button class="addSellingPoint">Add Selling Point</button>
-                  <button class="removeSellingPoint"><i class="fa fa-close"></i></button>
+                  <button class="removeSellingPoint">X</button>
                 </p>
                 <input type="text" name="sellingPoints">
               </label>
@@ -75,18 +84,27 @@
             <div class="benefits">
               <label>
                 <p>
-                  <button class="addBenefit">Add Selling Point</button>
-                  <button class="removeBenefit"><i class="fa fa-close"></i></button>
+                  <button class="addBenefit">Add Benefits</button>
+                  <button class="removeBenefit">X</button>
                 </p>
-                <input type="text" name="benefits">
+                <p>
+                  <input type="text" name="benefits">
+                  <button class="remove">X</button>
+                </p>
               </label>
             </div>
-            <label>
-              <input type="text" name="notice">
-          </label>
-                    <button>Create</button>
+            <div class="notice">
+              <label>
+                <p>Notice</p>
+                <input type="text" name="notice">
+              </label>
+            </div>
+            <div>
+              <button>Create</button>
+            </div>
           </fieldset>
         </form>
+        -->
         <br>
       </div>
     </div>
@@ -120,9 +138,6 @@
 <script type="text/javascript">
 var today = new Date();
 console.log("Todays Date: ",today)
-
-
-
 </script>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </body>

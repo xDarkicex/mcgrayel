@@ -17,6 +17,7 @@ func Initialize() *Server {
 	return &Server{Routes: GetRoutes()}
 }
 
+// route transforms function into Handle
 func route(fn helpers.RoutesHandler) httprouter.Handle {
 	return func(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 		a := helpers.RouterArgs{Request: r, Response: w, Params: ps}
@@ -36,6 +37,9 @@ func GetRoutes() *httprouter.Router {
 	router.GET("/products/new", route(products.New))
 	router.POST("/products/new", route(products.Create))
 	router.GET("/product/:name/edit", route(products.Edit))
+
+	location := controllers.Locate{}
+	router.GET("/locator", route(location.Locate))
 
 	fileServer := http.FileServer(http.Dir("public"))
 	router.GET("/static/*filepath", func(res http.ResponseWriter, req *http.Request, pm httprouter.Params) {

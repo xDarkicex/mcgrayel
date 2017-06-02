@@ -1,5 +1,10 @@
 window.onload = function() {
-
+   window.addEventListener("load", function() {
+     document.getElementById("form").addEventListener("submit", function(event) {
+       event.preventDefault(); // Prevent form submission and contact with server
+       event.stopPropagation();
+     }, false);
+   }, false);
   ///////////////////////////////////////////////
   // Handing adding and removing for key points
   ///////////////////////////////////////////////
@@ -71,10 +76,20 @@ window.onload = function() {
     e.preventDefault();
     var wrapper = document.querySelector('.benefits');
     var label = document.createElement('label');
+    var p = document.createElement('p');
     var input = document.createElement('input');
-    input.setAttribute("type", "text");
+    var remove = document.createElement('button')
+    remove.className = "remove"
+    remove.innerText = "X"
+    remove.addEventListener("click", function(e){
+      e.preventDefault();
+      e.target.parentNode.remove()
+    })
+    input.setAttribute("type", "text")
     input.setAttribute("name", "benefits");
-    label.appendChild(input);
+    p.appendChild(input);
+    p.appendChild(remove);
+    label.appendChild(p);
     wrapper.appendChild(label);
   }
 
@@ -85,5 +100,8 @@ window.onload = function() {
       wrapper.removeChild(wrapper.querySelector('label:last-child'));
     }
   }
-
+  document.querySelector('.remove').onclick = function(e) {
+    e.preventDefault();
+    e.target.parentNode.remove()
+  }
 }
