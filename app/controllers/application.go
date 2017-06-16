@@ -16,11 +16,14 @@ func (this Application) International(a helpers.RouterArgs) {
 
 }
 
-type Locate helpers.Controller
-
-type Product struct {
-	Name string
+func (this Application) About(a helpers.RouterArgs) {
+	//Changing obj to data will update all programming and delete this comment in future
+	// The reasoning is data is a better disc.
+	data := map[string]interface{}{}
+	helpers.Render(a, "application/about", data)
 }
+
+type Locate helpers.Controller
 
 func (this Locate) Locate(a helpers.RouterArgs) {
 	helpers.Render(a, "storeLocator/locator", nil)
