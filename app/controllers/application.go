@@ -28,6 +28,11 @@ func (this Application) Order(a helpers.RouterArgs) {
 	helpers.Render(a, "application/order", data)
 }
 
+func (this Application) Contact(a helpers.RouterArgs) {
+	data := map[string]interface{}{}
+	helpers.Render(a, "application/contact", data)
+}
+
 type Locate helpers.Controller
 
 func (this Locate) Locate(a helpers.RouterArgs) {
