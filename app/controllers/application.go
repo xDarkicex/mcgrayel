@@ -33,8 +33,18 @@ func (this Application) Contact(a helpers.RouterArgs) {
 	helpers.Render(a, "application/contact", data)
 }
 
+func (this Application) SDS(a helpers.RouterArgs) {
+	data := map[string]interface{}{}
+	helpers.Render(a, "application/sds", data)
+}
+
 type Locate helpers.Controller
 
 func (this Locate) Locate(a helpers.RouterArgs) {
 	helpers.Render(a, "storeLocator/locator", nil)
+}
+
+func loadSDSSheet(name string) *data {
+
+	return &data{}
 }
