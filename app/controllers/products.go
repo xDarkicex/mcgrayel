@@ -39,6 +39,7 @@ func setObject(name string) *data {
 	case "pooltec":
 		return &data{
 			"name": strings.ToTitle(name),
+			"img":  name,
 			"tag":  "Pooltec® 3-in-1 Pool Water Treatment",
 			"points": []string{
 				"Continuous prevention of green, yellow and black algae. Kills most algae in 4 to 24 hours.",
@@ -78,6 +79,7 @@ func setObject(name string) *data {
 	case "algatec":
 		return &data{
 			"name": strings.ToTitle(name),
+			"img":  name,
 			"tag":  "Fast Effective Algae Removal",
 			"points": []string{
 				"Kills and Controls all algae, green, yellow and black.",
@@ -114,6 +116,7 @@ func setObject(name string) *data {
 	case "beautec":
 		return &data{
 			"name": strings.ToTitle(name),
+			"img":  name,
 			"tag":  "Fast Effective Algae Removal",
 			"points": []string{
 				"Kills and Controls all algae, green, yellow and black.",
