@@ -19,12 +19,12 @@
 {{ end }}
 
 {{define "scripts"}}
-	<script src="static/assets/js/application.js"></script>
+
 	<script src="static/assets/js/toggle.js"></script>
 	<script src="static/assets/js/slider.js"></script>
 	<script src="static/assets/js/animate.js"></script>
 	<script src="static/assets/js/jquery.simplemodal.js"></script>
-	<script src="static/assets/js/basic.js" async></script>
+	<script src="static/assets/js/basic.js"></script>
 {{ end }}
 
 {{define "fadein"}}
@@ -87,4 +87,33 @@
 <link rel="stylesheet" type="text/css" href="../static/assets/css/reset.css">
 <link rel="stylesheet" type="text/css" href="../static/assets/css/bootstrap.css">
 </head>
+{{end}}
+
+{{define "footer"}}
+	<div class="footer" style="display: flex; justify-content: center;">
+		<div style="flex-grow:1; align-self: center;">
+		<!-- center this -->
+		</div>
+		<div style="flex-grow:1; align-self: center;">
+			<p>Mcgrayel Company© 1978-2017</p>
+			<p>
+				<a href="http://easycarewater.com">http://easycarewater.com</a>
+			</p>
+		</div>
+		<div style="flex-grow:1; align-self: center;">
+			<img id="sds" src="../static/assets/images/sds.png">
+			<script type="text/javascript">
+				document.addEventListener('DOMContentLoaded', function() {
+					var sds = document.getElementById('sds')
+					document.addEventListener('click', function(e) {
+						if (e.target.id == sds.id) {
+								//dynamic linking would be possilbe if I pass a hashed map of all links
+							window.location = "/sds.html"
+						}
+					}, true)
+				},true)
+			</script>
+		</div>
+
+	</div><!-- End Footer -->
 {{end}}

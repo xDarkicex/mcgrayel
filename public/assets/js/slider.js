@@ -80,7 +80,7 @@ $('.slider').on({
 var pdfINDEX = 0;
 var slides = $('#pdf-slider').children();
 // Gah dynamic typing JAVASCRIPT SUCKS, this should all be remade in typescript...
-var forceNext;
+var forcedNext;
 console.log(slides + "slide numb");
 
 function  startNext(){
@@ -94,7 +94,7 @@ function pdfNext(){
 };
 
 function forceNext(){
- forceNext = window.setInterval(startNext, 5000)
+ forcedNext = window.setInterval(startNext, 5000)
 };
 
 $(document).ready(function(){
@@ -104,16 +104,12 @@ $(document).ready(function(){
 $('.pdf-slider-container').on({
    mouseenter: function() {
        window.clearInterval(forceNext)
-    forceNext = undefined;
+    forcedNext = undefined;
     },
     mouseleave: function() {
-        forceNext = window.setInterval(startNext, 5000);
+        forcedNext = window.setInterval(startNext, 5000);
     }
 });
-
-function fuckIt() {
-
-}
 
 //All of this is horrible!! bad way to make links
 $('.main-bottle-container div:nth-child(1)').on('click', function(){

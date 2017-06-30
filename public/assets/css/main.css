@@ -846,7 +846,6 @@ input[type="checkbox"] + label span:hover {
 		cursor: pointer;
 }
 .footer{
-	height: 60px;
 	width: 100%;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -854,6 +853,16 @@ input[type="checkbox"] + label span:hover {
 	text-align: center;
 	line-height: 30px;
 	color:#fff;
+}
+
+#sds {
+	height: 80px;
+	margin-top: 10px;
+	transition: all 70ms ease-in;
+}
+#sds:hover{
+	cursor: pointer;
+	transform: scale(1.1, 1.1);
 }
 
 .social-footer{
@@ -942,11 +951,6 @@ Slide Menu
 
 .arrow-img.active{
 	transform: rotate(0deg);
-
-}
-
-.menu-wrapper ul li {
-
 
 }
 
