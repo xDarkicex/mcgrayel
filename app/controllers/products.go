@@ -40,6 +40,7 @@ func setObject(name string) *data {
 		return &data{
 			"name": strings.ToTitle(name),
 			"img":  name,
+			"sds":  name,
 			"tag":  "Pooltec® 3-in-1 Pool Water Treatment",
 			"points": []string{
 				"Continuous prevention of green, yellow and black algae. Kills most algae in 4 to 24 hours.",
@@ -80,6 +81,7 @@ func setObject(name string) *data {
 		return &data{
 			"name": strings.ToTitle(name),
 			"img":  name,
+			"sds":  name,
 			"tag":  "Fast Effective Algae Removal",
 			"points": []string{
 				"Kills and Controls all algae, green, yellow and black.",
@@ -117,6 +119,7 @@ func setObject(name string) *data {
 		return &data{
 			"name": strings.ToTitle(name),
 			"img":  name,
+			"sds":  name,
 			"tag":  "Fast Effective Algae Removal",
 			"points": []string{
 				"Kills and Controls all algae, green, yellow and black.",
@@ -148,6 +151,80 @@ func setObject(name string) *data {
 			},
 			"notice": "",
 		}
+	case "pooltec-winter":
+		return &data{
+			"name": strings.ToTitle(name),
+			"img":  name,
+			"sds":  "pooltec",
+			"tag":  "Fall-Winter Pool Treatment",
+			"selling": []string{
+				"Keeps pool water clean, clear and algae-free.",
+				"Little or no chlorine of salt cell usage.",
+				"Pooltec will not break down scale stain inhibitors.",
+				"Protection not effected by heat, sunlight or evaporation.",
+				"Outlast winterizing kits, works when chlorine is gone.",
+				"Strong protection lasts from fall to spring",
+			},
+			"summary": "Pooltec Fall-winter Treatment provides strong, lasting winter protection that outlast winterizing kits and other winter treatments. Pooltec gives your customers the assurance that their pool will be clean at spring opening. Pooltec is the only treatment that protects covered, mesh and even uncovered pools.",
+			"points": []string{
+				"All Season Algaecide",
+				"Water Clarifier",
+				"Non-Chlorine Treatment",
+				"Protection Lasts from fall to Spring",
+			},
+			"howItWorks": "Start with a clean, balanced pool and if needed, shock pool. Pour 3/4 to one quart of pooltec Fall-Winter Treatment per 10,000 gallons at time of pool closing, along with other closing additives.",
+		}
+	case "scaletec":
+		return &data{
+			"name": strings.ToTitle(name),
+			"img":  name,
+			"sds":  name,
+			"tag":  "Strong pool Surface and tile descaler plus stain remover.",
+			"points": []string{
+				"Effectively removes calcium buildup on pool surfaces, tile and equipment.",
+				"Cleans and restores pool surfaces in just two weeks.",
+				"Stain remover and sequesters iron, copper, and manganese metals.",
+				"Sait cell cleaner, protector and helps optimize chlorine output.",
+				"Replaces hazardous acid-washing method and costly tile cleaing.",
+				"Advanced non-acidic and ultra-low phosphate Synertec formulation.",
+			},
+			"summary":    "High performance swimming pool calcium descaler, iron stain, and scum remover/preventive. first pourable product that removes hard water buildup throughout pool surfaces, tile and all equipment without scrubbing or acids. Pour directly into pool water. Highly effective in preventing iron, copper, and manganese stains. Powerful Synertec formula provides long lasting, affordable protection year-round with just a small monthly application.",
+			"howItWorks": "Scaletec Plus unique Synertec formula involve components that remove both new and old white calcium and mixed composition scales and metal stains. This process involves a combination of super-sequestration, crystal modification - absorption, and threshold inhibition. Scales and stains are both loosen from surfaces and redissolved into pool water hich are filtered away or kept in suspension.",
+			"features": []string{
+				"Strong mineral scale, metal stain, and scum remover and preventer.",
+				"Descales calcium buildup throughout pool without an acid-wash and pool draining.",
+				"Cleans salt cell generator to remove and prevent calcium buildup.",
+			},
+			"selling": []string{
+				"Scaletec plus is the first pourable calcium descaler-remover added directly to pool water to cleanup pool surfaces, tile, filters and all other pool equipment.",
+				"Excellent pretreatment to an acid wash especially for pools with very old scale.",
+				"pool surface restoration, cleanup, and descaling results in just 2 to 4 weeks.",
+				"Long lasting cleanup and preventive action due to highly stable chlorine components.",
+				"Affordable, do-it-yourself cleanup requires no special equipment or knowledge.",
+				"Save hundreds of dollars over acid washing and tile cleaning expense.",
+			},
+			"benefits": []string{
+				"One to two bottles will descale an average 20,000 gallons of swimming pool water.",
+				"One 64 Oz. bottle provides three monthly follow up maintenance dosages.",
+				"Scaletec Plus also descales pool filter, heater, water auto-leveler and solar units.",
+				"Non acidic, non-staining, low phosphates, and enviro-safe components.",
+				"Superior winter Surface descaler-stain preventative during non-swimming season.",
+			},
+			"notice": "For heavily scaled pools, double the recommended cleanup dosage, and keep chlorine levels at 3.0 ppm or less. After one Month, use Beautec product to continue cleanup activity.",
+		}
+	case "protec":
+		return &data{
+			"name": strings.ToTitle(name),
+			"img":  name,
+			"sds":  name,
+		}
+	case "fountec":
+		return &data{
+			"name": strings.ToTitle(name),
+			"img":  name,
+			"sds":  name,
+		}
+
 	default:
 		return &data{}
 	}
