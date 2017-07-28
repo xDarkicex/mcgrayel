@@ -113,33 +113,33 @@ $('.pdf-slider-container').on({
 
 //All of this is horrible!! bad way to make links
 $('.main-bottle-container div:nth-child(1)').on('click', function(){
-  window.location = "http://mcgrayel.com/algatec.html";
+  window.location = "http://easycarewater.com/product/algatec";
 });
 
 $('.main-bottle-container div:nth-child(2)').on('click', function(){
-  window.location = "http://mcgrayel.com/beautec.html";
+  window.location = "http://easycarewater.com/product/beautec";
 });
 
 $('.main-bottle-container div:nth-child(3)').on('click', function(){
-  window.location = "http://mcgrayel.com/pooltec.html";
+  window.location = "http://easycarewater.com/product/pooltec";
 });
 
 $('.main-bottle-container div:nth-child(4)').on('click', function(){
-  window.location = "http://mcgrayel.com/pooltec_winter.html";
+  window.location = "http://easycarewater.com/product/pooltec-winter";
 });
 
 $('.main-bottle-container div:nth-child(5)').on('click', function(){
-  window.location = "http://mcgrayel.com/scaletectplus.html";
+  window.location = "http://easycarewater.com/product/scaletect";
 });
 
 $('.main-bottle-container div:nth-child(6)').on('click', function(){
-  window.location = "http://mcgrayel.com/startuptec.html";
+  window.location = "http://easycarewater.com/product/startup-tec";
 });
 
 $('.main-bottle-container div:nth-child(7)').on('click', function(){
-  window.location = "http://mcgrayel.com/fountec.html";
+  window.location = "http://easycarewater.com/product/fountec";
 });
 
 $('.main-bottle-container div:nth-child(8)').on('click', function(){
-  window.location = "http://mcgrayel.com/protec.html";
+  window.location = "http://easycarewater.com/product/protec";
 });
