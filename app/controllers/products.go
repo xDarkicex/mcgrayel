@@ -173,7 +173,7 @@ func setObject(name string) *data {
 			},
 			"howItWorks": "Start with a clean, balanced pool and if needed, shock pool. Pour 3/4 to one quart of pooltec Fall-Winter Treatment per 10,000 gallons at time of pool closing, along with other closing additives.",
 		}
-	case "scalene":
+	case "scaletec":
 		return &data{
 			"name": strings.ToTitle(name),
 			"img":  name,
@@ -216,6 +216,18 @@ func setObject(name string) *data {
 			"name": strings.ToTitle(name),
 			"img":  name,
 			"sds":  name,
+			"tag":  "An Advanced Treatment for the Prevention of Plaster Dust, Staining and Mottling.",
+			"points": []string{
+				"Provides cleaner startups with 90%-100% less dust and brushing.",
+				"Significant reduction of mottling discoloration on all types of finishes.",
+				"Typically eliminates “hot startups” that exposes quartz and aggregates.",
+				"Strongly sequesters metal ions that stain surfaces and form calcium film.",
+				"More brilliant exposure of pigmented and pebble type finishes.",
+				"Advanced multi-sequestrant formulation... no phosphates or acids.",
+				"Reduces warranty issues, lawsuits, and replastering of damaged pools.",
+				"Swimmers can use pool immediately.",
+			},
+			"summary": "Prevents plus removes plaster dust - Eliminates tedious surface brushing - Significantly reduces surface mottling discoloration - Exposes aggregates brilliantly with less acid",
 		}
 	case "protec":
 		return &data{
@@ -223,12 +235,35 @@ func setObject(name string) *data {
 			"img":  name,
 			"sds":  name,
 			"tag":  "",
+			"points": []string{
+				"Prevents and removes scale buildup.",
+				"Control water metals and prevents surface stains.",
+				"Protec protects fountain water pump.",
+				"Eliminates distilled water usage.",
+				"Small monthly dosage.",
+				"Non-acidic and environmentally safe.",
+				"Treated water safe for birds, plants,animals, and fish.",
+			},
+			"summary": "Protecs' powerful Synertec cleaners remove and prevent both white calcium scale-deposits and stains (due to iron and copper) on surfaces of decorative; fountains, birdbaths, tabletop fountains, and water gardens.",
+			"notice":  "Should calcium persist, raise water levels to allow protec to \"soak\" deposit. Double the recommended dosage for stuborn calcium.",
 		}
 	case "fountec":
 		return &data{
 			"name": strings.ToTitle(name),
 			"img":  name,
 			"sds":  name,
+			"points": []string{
+				"Powerful green algae remover.",
+				"Erradicates yellow and black algae.",
+				"Removes and kills clinging or stubborn type algae with minimal brushing.",
+				"Water clarifiers leaves water ultra-clear.",
+				"Non-foaming and non-staining.",
+				"No weekly chlorine or testing required.",
+				"Prevents regrowth with small weekly dose.",
+				"Safe for plants, birds, and animals to drink treated water - but not safe for fish.",
+			},
+			"summary": "Kills all types of algae and prevents regrowth in decorative fountains, water gardens, tabletops, and birdbaths. Fountecs' cationic polymers also super-clarify water.",
+			"notice":  "Should Algae persit repeat visible algae dosage everyday, to further assist in algae and biofilm removal, shock foutain with household bleach.",
 		}
 
 	default:
