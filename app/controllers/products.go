@@ -35,7 +35,6 @@ type data map[string]interface{}
 
 func setObject(name string) *data {
 	switch name {
-
 	case "pooltec":
 		return &data{
 			"name": strings.ToTitle(name),
@@ -43,30 +42,30 @@ func setObject(name string) *data {
 			"sds":  name,
 			"tag":  "Pooltec® 3-in-1 Pool Water Treatment",
 			"points": []string{
-				"Continuous prevention of green, yellow and black algae. Kills most algae in 4 to 24 hours.",
-				"Strong clarifiers create ultra-clear water.",
-				"Boosts chlorine’s effectiveness up to 6X (600%).",
-				"Improves salt cell’s chlorine output and performance.",
+				"Continuous prevention of green; yellow and black algae. Kills most algae in 4 to 24 hours.",
+				"Clarifies create ultra-clear water.",
+				"Boosts chlorine effectiveness up to 6X (600%).",
+				"Improves salt cells' chlorine output and performance.",
 				"Eliminates chlorine odors & skin-eye irritation.",
 			},
-			"summary":    "pooltec® Pooltec® 3-in-1 multi-task product that kills and prevents all types of algae growth, ultra clarifies water, and is a strong chlorine booster for both chlorine and salt pools. used weekly, Pooltec® synergizes with all types of chlorine to boost water quality and chlorine effectiveness. It helps increase chlorine residuals in salt pools especially during heavy use periods. Pooltec® also keeps pool water consistantly treated, eliminating cleanup products such as algaecides and clarifiers. Overall, Pooltec® provides for easier, year-round pool maintenance.",
-			"howItWorks": "Pooltec's® enviromentally safe polymers uniquely synergize with all types of sanitizers to provide superior water quality, greater clarity, and improve water sanitation. Unique cationic polymeric compounds function as a broad spectrum, non-oxiding algaecide-microbicide that kill and control the growth of microorganisms by disturbing their normal metabolic process of the living cell. This process achives a super-sanitzed condition with average oxidizer level",
+			"summary":    "Pooltec® 3-in-1 multitask product that kills and prevents all types of algae growth, ultra clarifies water, and is a strong chlorine booster for both chlorine and salt pools. When used weekly, Pooltec® synergies with all types of chlorine to boost water quality and chlorine effectiveness. Pooltec® helps increase chlorine residuals in salt pools especially during heavy usage periods. Pooltec® also keeps pool water consistently treated, eliminating the need for cleanup products such as algaecides and clarifies. The use of Pooltec® provides an easy, year-round pool maintenance solution.",
+			"howItWorks": "Pooltecs'® environmentally safe polymers uniquely synergies with all types of sanitizes to provide superior water quality, clarity, and improve water sanitation. Unique cat ionic polymeric compounds function as a broad spectrum, non-oxiding algaecide-microbicide that kill and control the growth of microorganisms by disturbing their normal metabolic process of the living cell. This process archives a super-sanitzed condition with average oxidizer level",
 			"features": []string{
-				"High performance algaecide, water clarifier, and chlorine booster.",
-				"Kills and inhibits the regrowth of yellow and black type algae (fungi).",
+				"High performance algaecide; water clarifies, and chlorine booster.",
+				"Kills and inhibits the regrowth of yellow and black type algae(fungi).",
 				"Strong chlorine synergy reduces pool shocking and chlorine usage by 25 - 65%.",
 				"Reduces salt cell generator operating time and increase life span of salt cell.",
 				"Boosts chlorine effectiveness up to 600%.",
 				"Reduces overall weekly treatment costs.",
 			},
 			"selling": []string{
-				"The only 3-way pool enhancer treatment available that kills, clarifies amd boosts.",
+				"The only 3-way pool enhancer treatment available that kills, clarifies and boosts.",
 				"Small weekly dosage, only 4 - 6 oz. per 10,000 gallons.",
 				"Pays for itself in chlorine savings.",
 				"Provides Superior treatment results without additional testing.",
 				"Substantially improves water quality and swimmer comfort.",
-				"Eliminates need for other cleanup products such as algaecides and clarifiers.",
-				"Superior results compared to enzymes, phosphate removers, brimides, silver, and copper treatments.",
+				"Eliminates need for other cleanup products such as algaecides and clarifies.",
+				"Superior results compared to enzymes, phosphate removers, bromides, silver, and copper treatments.",
 			},
 			"benefits": []string{
 				"One bottle will last the average 20,000 gallon pool two months.",
@@ -90,30 +89,30 @@ func setObject(name string) *data {
 				"Strongest, fastest acting algaecide available.",
 				"Metal-free, non-hazardous to handle, will not foam or stain.",
 			},
-			"summary":    "Algatec® is a highly effective, dual-action algaecide that quickly kills all types of green and yellow algae in 4 to 24 hours. The product also eradicates stubborn black algae-fungi growths with minimal brushing. Algatec's® powerful interaction with clorine based sanitizers help to enhance algae cleanup and removal. This is due to it's algastat inhibitor function. Algatec® also leaves pool water sparkling clear due to it's strong polymeric clarifying action.",
-			"howItWorks": "Algatec's® unique cationic polymeric compound function as a broad spectrum, non-oxiding algaecide-microbicide that kill and control the growth of microorganisms by distubing their normal metabolic process of the living cell. Algatec® has a powerful synergy with chlorine sanitizers which further enhance algae kill and removal. the product is metal-free, bromide-free, ammonia-free will not cause foam or stain and doesn't remove chlorine from pool.",
+			"summary":    "Algatec® is a highly effective, dual-action algaecide that quickly kills all types of green and yellow algae in 4 to 24 hours. The product also eradicates stubborn black algae-fungi growths with minimal brushing. Algatecs'® powerful interaction with chlorine based sanitizes help to enhance algae cleanup and removal. This is due to it's alga stat inhibitor function. Algatec® also leaves pool water sparkling clear due to its strong polymeric clarifying action.",
+			"howItWorks": "Agates'® unique cat ionic polymeric compound function as a broad spectrum, non-oxiding algaecide-microbicide that kill and control the growth of microorganisms by disturbing their normal metabolic process of the living cell. Algatec® has a powerful synergy with chlorine sanitizes which further enhance algae kill and removal. The product is metal-free, bromide-free, ammonia-free will not cause foam or stain and doesn't remove chlorine from pool.",
 			"features": []string{
-				"kills and removes all types of green and yellow algae in 4 to 24 hours.",
-				"Eradicates black algae-fungi growths in 7 to 10 days or less.",
+				"Kills and removes all types of green and yellow algae in 4 to 24 hours.",
+				"Eradicates black algae-fungi growths in 7 to 10 days or fewer.",
 				"Super-clarifies pool water during cleanup function.",
 				"Provides the fastest cleanup action available compared to other algaecide's on the market today.",
 			},
 			"selling": []string{
-				"Extremely effective algaecide for all pool types and enviroments.",
+				"Extremely effective algaecide for all pool types and environments.",
 				"Fast acting with superior results. Strong synergy with chlorine enhances cleanup.",
 				"Ultra-clarifies pool water during cleanup.",
-				"Salt pool friendly,  will not interfere or deposit on cell plates.",
+				"Salt pool friendly, will not interfere or deposit on cell plates.",
 				"Metal-free, non-hazardous to handle, will not foam or stain.",
 			},
 			"benefits": []string{
 				"Easy to use for algae removal and cleanup.",
 				"No testing required.",
-				"Will not interfere with pool water pH, chemistries or sanitizer levels.",
+				"Will not interfere with pool water pH, chemistries or sanitation levels.",
 				"No wait time, pool is immediately ready for uses",
 				"Minimal brushing required for yellow or black algae removal.",
 				"Will not stain pool surface's, swimmer's hair and clothing.",
 			},
-			"notice": "For severe cleanup pool's, use extra chlorine to help remove dead algae.",
+			"notice": "For severe cleanup, use extra chlorine to help remove dead algae.",
 		}
 	case "beautec":
 		return &data{
@@ -128,11 +127,11 @@ func setObject(name string) *data {
 				"Strongest, fastest acting algaecide available.",
 				"Metal-free, non-hazardous to handle, will not foam or stain.",
 			},
-			"summary":    "Algatec® is a highly effective, dual-action algaecide that quickly kills all types of green and yellow algae in 4 to 24 hours. The product also eradicates stubborn black algae-fungi growths with minimal brushing. Algatec's® powerful interaction with clorine based sanitizers help to enhance algae cleanup and removal. This is due to it's algastat inhibitor function. Algatec® also leaves pool water sparkling clear due to it's strong polymeric clarifying action.",
-			"howItWorks": "Algatec's® unique cationic polymeric compound function as a broad spectrum, non-oxiding algaecide-microbicide that kill and control the growth of microorganisms by distubing their normal metabolic process of the living cell. Algatec® has a powerful synergy with chlorine sanitizers which further enhance algae kill and removal. the product is metal-free, bromide-free, ammonia-free will not cause foam or stain and doesn't remove chlorine from pool.",
+			"summary":    "Algatec® is a highly effective, dual-action algaecide that quickly kills all types of green and yellow algae in 4 to 24 hours. The product also eradicates stubborn black algae-fungi growths with minimal brushing. Agates'® powerful interaction with chlorine based sanitizes help to enhance algae cleanup and removal. This is due to Agates'® alga stat inhibitor function. Algatec® also leaves pool water sparkling clear due to its strong polymeric clarifying action.",
+			"howItWorks": "Agates'® unique cat ionic polymeric compound function as a broad spectrum, non-oxiding algaecide-microbicide that kill and control the growth of microorganisms by disturbing their normal metabolic process of the living cell. Algatec® has a powerful synergy with chlorine sanitizes which further enhance algae kill and removal. The product is metal-free, bromide-free, ammonia-free will not cause foam or stain and doesn't remove chlorine from pool.",
 			"features": []string{
 				"kills and removes all types of green and yellow algae in 4 to 24 hours.",
-				"Eradicates black algae-fungi growths in 7 to 10 days or less.",
+				"Eradicates black algae-fungi growths in 7 to 10 days or fewer.",
 				"Super-clarifies pool water during cleanup function.",
 				"Provides the fastest cleanup action available compared to other algaecide's on the market today.",
 			},
@@ -140,11 +139,11 @@ func setObject(name string) *data {
 				"Provides complete control of all types of metal.",
 				"Fast acting with superior results. Strong synergy with chlorine enhances cleanup.",
 				"Ultra-clarifies pool water during cleanup.",
-				"Salt pool friendly,  will not interfere or deposit on cell plates.",
+				"Salt pool friendly, will not interfere or deposit on cell plates.",
 				"Metal-free, non-hazardous to handle, will not foam or stain.",
 			},
 			"benefits": []string{
-				"Only 1 to 2 bottles per year for most pools, after initial startup dosage.",
+				"Only 1-2 bottles per year for most pools, after initial start up dosage.",
 				"It's easy and affordable to use, just add monthly or twice per year.",
 				"Removes existing buildup without costly tile cleaning and acid washing.",
 				"Easy to use, just pour in and swim immediately",
@@ -174,7 +173,7 @@ func setObject(name string) *data {
 			},
 			"howItWorks": "Start with a clean, balanced pool and if needed, shock pool. Pour 3/4 to one quart of pooltec Fall-Winter Treatment per 10,000 gallons at time of pool closing, along with other closing additives.",
 		}
-	case "scaletec":
+	case "scalene":
 		return &data{
 			"name": strings.ToTitle(name),
 			"img":  name,
@@ -184,19 +183,19 @@ func setObject(name string) *data {
 				"Effectively removes calcium buildup on pool surfaces, tile and equipment.",
 				"Cleans and restores pool surfaces in just two weeks.",
 				"Stain remover and sequesters iron, copper, and manganese metals.",
-				"Sait cell cleaner, protector and helps optimize chlorine output.",
+				"Salt cell cleaner, protector and helps optimize chlorine output.",
 				"Replaces hazardous acid-washing method and costly tile cleaing.",
 				"Advanced non-acidic and ultra-low phosphate Synertec formulation.",
 			},
-			"summary":    "High performance swimming pool calcium descaler, iron stain, and scum remover/preventive. first pourable product that removes hard water buildup throughout pool surfaces, tile and all equipment without scrubbing or acids. Pour directly into pool water. Highly effective in preventing iron, copper, and manganese stains. Powerful Synertec formula provides long lasting, affordable protection year-round with just a small monthly application.",
-			"howItWorks": "Scaletec Plus unique Synertec formula involve components that remove both new and old white calcium and mixed composition scales and metal stains. This process involves a combination of super-sequestration, crystal modification - absorption, and threshold inhibition. Scales and stains are both loosen from surfaces and redissolved into pool water hich are filtered away or kept in suspension.",
+			"summary":    "High performance swimming pool calcium descaler, iron stain, and scum remover/preventive. First pour able product that removes hard water buildup throughout pool surfaces, tile and all equipment without scrubbing or acids. Pour directly into pool water. Highly effective in preventing iron, copper, and manganese stains. Powerful Synertec formula provides long lasting, affordable protection year-round with just a small monthly application.",
+			"howItWorks": "Scalene Plus unique Synertec formula involve components that remove both new and old white calcium and mixed composition scales and metal stains. This process involves a combination of super-sequestration, crystal modification - absorption, and threshold inhibition. Scales and stains are both loosen from surfaces and redissolved into pool water hich are filtered away or kept in suspension.",
 			"features": []string{
-				"Strong mineral scale, metal stain, and scum remover and preventer.",
+				"Strong mineral scale, metal stain, and scum remover and preventative.",
 				"Descales calcium buildup throughout pool without an acid-wash and pool draining.",
 				"Cleans salt cell generator to remove and prevent calcium buildup.",
 			},
 			"selling": []string{
-				"Scaletec plus is the first pourable calcium descaler-remover added directly to pool water to cleanup pool surfaces, tile, filters and all other pool equipment.",
+				"Scalene plus is the first pour able calcium descaler-remover added directly to pool water to cleanup pool surfaces, tile, filters and all other pool equipment.",
 				"Excellent pretreatment to an acid wash especially for pools with very old scale.",
 				"pool surface restoration, cleanup, and descaling results in just 2 to 4 weeks.",
 				"Long lasting cleanup and preventive action due to highly stable chlorine components.",
@@ -206,17 +205,24 @@ func setObject(name string) *data {
 			"benefits": []string{
 				"One to two bottles will descale an average 20,000 gallons of swimming pool water.",
 				"One 64 Oz. bottle provides three monthly follow up maintenance dosages.",
-				"Scaletec Plus also descales pool filter, heater, water auto-leveler and solar units.",
+				"Scalene Plus also descales pool filter, heater, water auto-leveler and solar units.",
 				"Non acidic, non-staining, low phosphates, and enviro-safe components.",
 				"Superior winter Surface descaler-stain preventative during non-swimming season.",
 			},
 			"notice": "For heavily scaled pools, double the recommended cleanup dosage, and keep chlorine levels at 3.0 ppm or less. After one Month, use Beautec product to continue cleanup activity.",
+		}
+	case "startup-tec":
+		return &data{
+			"name": strings.ToTitle(name),
+			"img":  name,
+			"sds":  name,
 		}
 	case "protec":
 		return &data{
 			"name": strings.ToTitle(name),
 			"img":  name,
 			"sds":  name,
+			"tag":  "",
 		}
 	case "fountec":
 		return &data{
