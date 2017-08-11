@@ -270,10 +270,10 @@ func setObject(name string) *data {
 				"Prevents regrowth with small weekly dose.",
 				"Safe for plants, birds, and animals to drink treated water.",
 				"Not safe for aquatic life.",
+			},
 			"summary": "Kills all types of algae and prevents regrowth in decorative fountains, water gardens, tabletops, and birdbaths. Fountecs' cationic polymers also super-clarify water.",
 			"notice":  "Should Algae persit repeat visible algae dosage everyday, to further assist in algae and biofilm removal, shock foutain with household bleach.",
 		}
-
 	default:
 		return &data{}
 	}
