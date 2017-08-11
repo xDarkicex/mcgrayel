@@ -1028,7 +1028,8 @@ Rainbow menu
 ====================
 Media Queries
 ====================
-*/
+/* 
+
 
 @media (max-width: 1850px){
 	.menu-wrapper{
@@ -1092,7 +1093,7 @@ Media Queries
 	.menu-wrapper.active{
 		left: 35px;
 	}
-}
+}*/
 
 @media (max-width: 1530px){
 
@@ -1212,7 +1213,7 @@ display:none;
 		margin-right: 15px;
 		margin-left: 5%;
 		margin-bottom: 15px;
-/*		align-items: flex-end;*/
+	align-items: flex-end;
 		height: auto;
 	}
 
