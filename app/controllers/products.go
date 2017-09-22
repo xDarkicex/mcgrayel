@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"fmt"
 	"strings"
 
 	"github.com/xDarkicex/mcgrayel/helpers"
@@ -12,9 +11,7 @@ type Products helpers.Controller
 
 func (products Products) Show(a helpers.RouterArgs) {
 	name := a.Params[0].Value
-	fmt.Println(name)
 	data := setObject(name)
-	fmt.Println(data)
 	helpers.Render(a, "products/product", *data)
 }
 

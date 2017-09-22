@@ -8,48 +8,7 @@ import (
 	"github.com/xDarkicex/mcgrayel/server"
 )
 
-// var (
-// 	session *mgo.Session
-// )
-
-// func init() {
-// 	// Dial mongo Datastore
-// 	err := datastore.Dial()
-// 	if err != nil {
-// 		log.Fatal(err)
-// 	}
-// 	session = datastore.GetSession()
-// }
-
-// var goHTML *template.Template
-
-// type Product struct {
-// 	Name   string
-// 	Method string
-// }
-// type Options struct {
-// 	isProduct bool
-// 	View      string
-// }
-
-// func Parse(opts Options) *Options {
-// 	return &Options{
-// 		isProduct: opts.isProduct,
-// 		View:      opts.View,
-// 	}
-// }
-
-// func (*Product) setMethod(method string) *Product {
-// 	return &Product{
-// 		Method: method,
-// 	}
-// }
-
-// func (*Product) setName(name string) *Product {
-// 	return &Product{
-// 		Name: name,
-// 	}
-// }
+//Server ppointer
 var Server *server.Server
 
 func init() {

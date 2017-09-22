@@ -30,6 +30,7 @@ func GetRoutes() *httprouter.Router {
 	router := httprouter.New()
 	application := controllers.Application{}
 	router.GET("/", route(application.Index))
+	router.HEAD("/", route(application.Index))
 	router.GET("/international", route(application.International))
 	router.GET("/about-us", route(application.About))
 	router.GET("/order", route(application.Order))
