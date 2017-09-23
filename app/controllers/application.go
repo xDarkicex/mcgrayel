@@ -14,7 +14,6 @@ func (this Application) Index(a helpers.RouterArgs) {
 }
 
 func (this Application) International(a helpers.RouterArgs) {
-
 	data := map[string]interface{}{}
 	helpers.Render(a, "application/international", data)
 
