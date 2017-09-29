@@ -16,12 +16,18 @@ document.addEventListener("DOMContentLoaded", function(e){
         var title = document.createElement('h4')
         title.className = "card-title"
         title.innerHTML = data[i].Name
+        title.style = "font-weight: bold;"
         info.appendChild(title)
       }
       if (data[i].Title) {
         var jobTitle = document.createElement('p')
         jobTitle.innerHTML = data[i].Title
         info.appendChild(jobTitle)
+      }
+      if (data[i].Phone) {
+        var Phone = document.createElement('p')
+        Phone.innerHTML = data[i].Phone
+        info.appendChild(Phone)
       }
       if (data[i].Email) {
         var Email = document.createElement('p')
