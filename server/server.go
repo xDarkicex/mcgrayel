@@ -12,8 +12,8 @@ type Server struct {
 	Routes *httprouter.Router
 }
 
-//Initialize will handle new httprouter servemux
-func Initialize() *Server {
+//NewServer will handle new httprouter servemux
+func NewServer() *Server {
 	return &Server{Routes: GetRoutes()}
 }
 
@@ -36,6 +36,7 @@ func GetRoutes() *httprouter.Router {
 	router.GET("/order", route(application.Order))
 	router.GET("/contact-us", route(application.Contact))
 	router.GET("/sds", route(application.SDS))
+	router.GET("/video-tour", route(application.VideoTour))
 
 	staff := controllers.Staff{}
 	router.GET("/staff", route(staff.Index))

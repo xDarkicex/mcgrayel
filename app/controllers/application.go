@@ -13,6 +13,14 @@ func (this Application) Index(a helpers.RouterArgs) {
 	helpers.Render(a, "application/index", map[string]interface{}{})
 }
 
+func (this Application) VideoTour(a helpers.RouterArgs) {
+	if a.Request.Method == "HEAD" {
+		a.Response.WriteHeader(200)
+		return
+	}
+	helpers.Render(a, "application/videotour", map[string]interface{}{})
+}
+
 func (this Application) International(a helpers.RouterArgs) {
 	data := map[string]interface{}{}
 	helpers.Render(a, "application/international", data)

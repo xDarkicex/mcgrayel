@@ -35,7 +35,7 @@ func getStaff() interface{} {
 		&employee{Name: "Marvin Rezac", Title: "C.E.O.", Phone: "(559) 246-3719", Email: "mrezac@easycarewater.com"},
 		&employee{Name: "Evangelina Serrano", Title: "President", Phone: "(559) 246-4480", Email: "eserrano@easycarewater.com"},
 		&employee{Name: "Monica Morgan", Title: "Accountant", Phone: "(559) 260-9692", Email: "accounting@easycarewater.com"},
-		&employee{Name: "Gentry Rolofson", Title: "Director of Information Technology", Phone: "(559) 676-0527", Email: "grolofson@bitdev.io"},
+		&employee{Name: "Gentry Rolofson", Title: "Overload of Data", Phone: "(559) 676-0527", Email: "grolofson@bitdev.io"},
 		&employee{Name: "Tiffany Rolofson", Title: "Senior sales Represenitive", Phone: "(559) 694-1267", Email: "trolofson@easycarewater.com"},
 		&employee{Name: "Jacqueline Hubbard", Title: "Sales Represenative", Phone: "(559) 321-3857", Email: "jkitchens@easycarewater.com"},
 		&employee{Name: "Rosemarie Arenas", Title: "Senior Sales Executive", Phone: "(559) 974-8252", Email: "rarenas@easycarewater.com"},
