@@ -59,7 +59,7 @@
 {{end}}
 
 {{define "nav"}}
-<div class="navMaterial, nav">
+<div class="navMaterial">
 <button material><a href="/">Home</a></button>
 <button material><a href="/locator">Store Locator</a></button>
 <button material><a href="/about-us">About Us</a></button>
@@ -73,12 +73,10 @@
 {{define "head"}}
 <meta charset="utf-8">
 
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <!-- Load jquery.cookie plugin (optional) -->
-    <script type="text/javascript" src="../static/navgoco/src/jquery.cookie.js"></script>
+
     <!-- Load jquery.navgoco plugin js and css files -->
-    <script type="text/javascript" src="../static/navgoco/src/jquery.navgoco.js"></script>
-    <link rel="stylesheet" href="../static/navgoco/src/jquery.navgoco.css" type="text/css" media="screen" />
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
 	<link rel="icon" href="../static/assets/images/favicon.png" type="image/png">
@@ -97,7 +95,7 @@
 	<div class="footer" style="display: flex; justify-content: center;">
 		<script type="text/javascript">
 		$(document).ready(function() {
-				$('.nav').navgoco();
+				
 		});
 		</script>
 		<div style="flex-grow:1; align-self: center;">
