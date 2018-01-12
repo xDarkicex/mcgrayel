@@ -31,7 +31,9 @@ func GetRoutes() *httprouter.Router {
 	application := controllers.Application{}
 	router.GET("/", route(application.Index))
 	router.HEAD("/", route(application.Index))
-	router.GET("/international", route(application.International))
+	intenernational := controllers.International{}
+	router.GET("/international", route(intenernational.Index))
+	router.GET("/international/greek", route(intenernational.Greek))
 	router.GET("/about-us", route(application.About))
 	router.GET("/order", route(application.Order))
 	router.GET("/contact-us", route(application.Contact))

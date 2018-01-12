@@ -21,12 +21,6 @@ func (this Application) VideoTour(a helpers.RouterArgs) {
 	helpers.Render(a, "application/videotour", map[string]interface{}{})
 }
 
-func (this Application) International(a helpers.RouterArgs) {
-	data := map[string]interface{}{}
-	helpers.Render(a, "application/international", data)
-
-}
-
 func (this Application) About(a helpers.RouterArgs) {
 	//Changing obj to data will update all programming and delete this comment in future
 	// The reasoning is data is a better disc.

@@ -1,0 +1,16 @@
+package controllers
+
+import "github.com/xDarkicex/mcgrayel/helpers"
+
+//International this is here to pass a type to router
+type International helpers.Controller
+
+func (i International) Index(a helpers.RouterArgs) {
+	data := map[string]interface{}{"name": "International"}
+	helpers.Render(a, "application/international", data)
+}
+
+func (i International) Greek(a helpers.RouterArgs) {
+	data := map[string]interface{}{"name": "Ελληνικά"}
+	helpers.Render(a, "application/greek", data)
+}
