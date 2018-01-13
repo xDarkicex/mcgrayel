@@ -4,10 +4,7 @@ document.addEventListener("DOMContentLoaded", function(e){
      if (xhr.status != 200) {
        return
      }
-
-     console.log(container)
      var data = JSON.parse(xhr.responseText)
-     console.log(data)
      var len = data.length
      for (i = 0; i < len; i++) {
       var container = document.querySelectorAll('.col-lg')[0]

@@ -2,6 +2,7 @@ package helpers
 
 import (
 	"net/http"
+	"time"
 
 	"github.com/gorilla/sessions"
 	"github.com/julienschmidt/httprouter"
@@ -29,3 +30,25 @@ type Flash struct {
 
 // RoutesHandler for handling padding multiple objects into routes
 type RoutesHandler func(a RouterArgs)
+
+//ContactForm struct for passing data to emails
+type ContactForm struct {
+	Body      string
+	Name      string
+	Telephone string
+	Product   string
+	Email     string
+}
+
+//Secret containts password
+type Secret struct {
+	Password string
+}
+
+//RecaptchaResponse is for google captcha
+type RecaptchaResponse struct {
+	Success     bool      `json:"success"`
+	ChallengeTS time.Time `json:"challenge_ts"`
+	Hostname    string    `json:"hostname"`
+	ErrorCodes  []string  `json:"error-codes"`
+}

@@ -7,10 +7,10 @@ type International helpers.Controller
 
 func (i International) Index(a helpers.RouterArgs) {
 	data := map[string]interface{}{"name": "International"}
-	helpers.Render(a, "application/international", data)
+	helpers.Render(a, "international/international", data)
 }
 
 func (i International) Greek(a helpers.RouterArgs) {
 	data := map[string]interface{}{"name": "Ελληνικά"}
-	helpers.Render(a, "application/greek", data)
+	helpers.Render(a, "international/greek", data)
 }

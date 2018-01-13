@@ -46,6 +46,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-
+# secret
+secret.json
 # project binary
 mcgrayel

@@ -1,6 +1,16 @@
 package controllers
 
-import "github.com/xDarkicex/mcgrayel/helpers"
+import (
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
+	"net/mail"
+	"net/smtp"
+	"strconv"
+
+	"github.com/scorredoira/email"
+	"github.com/xDarkicex/mcgrayel/helpers"
+)
 
 //Application this is here to pass a type to router
 type Application helpers.Controller
@@ -33,7 +43,45 @@ func (this Application) Order(a helpers.RouterArgs) {
 	helpers.Render(a, "application/order", data)
 }
 
+//Load loads config file
+func Load() {
+
+}
+
+func ReadJSON() *helpers.Secret {
+	data := helpers.Secret{}
+	secret, err := ioutil.ReadFile("./secret.json")
+	if err != nil {
+		fmt.Println(err, secret)
+	}
+	// fmt.Println(config)
+	err = json.Unmarshal(secret, &data)
+	if err != nil {
+		fmt.Println(err)
+	}
+	return &data
+}
+
 func (this Application) Contact(a helpers.RouterArgs) {
+	if a.Request.Method == "POST" {
+		password := ReadJSON()
+		msg := NewMessage(a)
+		subject := "Contact Request from " + msg.Name
+		data := "New Contact request from " + msg.Name + "\n" +
+			"Email: " + msg.Email + "\n" +
+			"Phone Number: " + msg.Telephone + "\n" +
+			"Product: " + msg.Product + "\n" +
+			"Contact Message: " + "\n" +
+			msg.Body
+		m := email.NewMessage(subject, data)
+		m.From = mail.Address{Name: "Services", Address: "orderprocessing@easycarewater.com"}
+		m.To = []string{"orderprocessing@easycarewater.com"}
+		auth := smtp.PlainAuth("", "orderprocessing@easycarewater.com", password.Password, "smtp.gmail.com")
+		SMTP := "smtp.gmail.com" + ":" + strconv.Itoa(587)
+		if err := email.Send(SMTP, auth, m); err != nil {
+			fmt.Println(err)
+		}
+	}
 	data := map[string]interface{}{}
 	helpers.Render(a, "application/contact", data)
 }
@@ -134,4 +182,20 @@ func loadSDSSheet(name string) *data {
 		}
 	}
 	return &data{}
+}
+
+//NewMessage returns a ContactForm struct
+// Name
+// Email
+// Telephone
+// Product
+// Body
+func NewMessage(a helpers.RouterArgs) *helpers.ContactForm {
+	return &helpers.ContactForm{
+		Name:      a.Request.FormValue("name"),
+		Email:     a.Request.FormValue("email"),
+		Telephone: a.Request.FormValue("telephone"),
+		Product:   a.Request.FormValue("product"),
+		Body:      a.Request.FormValue("body"),
+	}
 }

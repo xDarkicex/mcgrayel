@@ -37,6 +37,7 @@ func GetRoutes() *httprouter.Router {
 	router.GET("/about-us", route(application.About))
 	router.GET("/order", route(application.Order))
 	router.GET("/contact-us", route(application.Contact))
+	router.POST("/contact-us", route(application.Contact))
 	router.GET("/sds", route(application.SDS))
 	router.GET("/video-tour", route(application.VideoTour))
 

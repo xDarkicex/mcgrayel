@@ -29,20 +29,20 @@
         <p>Please free to call us at <a href="tel:+1-800-289-7660">1(800)289-7660</a>.</p>
       </div>
       <div style="display: flex;">
-        <form>
+        <form action="/contact-us" method="POST">
           <div>
             <label>Full Name:
-            <input type="text" name="name">
+            <input type="text" name="name" style="width: 100%;">
             </label>
           </div>
           <div>
             <label>E-Mail:
-              <input type="email" name="email">
+              <input type="email" name="email" style="width: 100%;">
             </label>
           </div>
           <div>
             <label>Phone Number:
-              <input type="tel" name="telephone">
+              <input type="tel" name="telephone" style="width: 100%;">
             </label>
           </div>
           <div>
@@ -52,7 +52,12 @@
               </select>
             </label>
           </div>
-          <input type="submit">
+          <div>
+            <textarea rows="5" cols="auto" style="width: 100%;" name="body"></textarea>
+          </div>
+          <div>
+            <input type="submit" style="width: 35%;">
+          </div>
 
         </form>
 
