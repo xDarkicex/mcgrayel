@@ -33,11 +33,12 @@ type RoutesHandler func(a RouterArgs)
 
 //ContactForm struct for passing data to emails
 type ContactForm struct {
-	Body      string
-	Name      string
-	Telephone string
-	Product   string
-	Email     string
+	Department string
+	Body       string
+	Name       string
+	Telephone  string
+	Product    string
+	Email      string
 }
 
 //Secret containts password

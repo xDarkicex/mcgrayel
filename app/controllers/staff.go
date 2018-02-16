@@ -62,7 +62,7 @@ func getStaff() []byte {
 		{Name: "Michael Alvarez", Title: "Shipping Manager", Phone: "", Email: ""},
 		{Name: "Jimmy Blajos", Title: "Plant Maintenance Manager", Phone: "", Email: ""},
 		{Name: "Debbie Saldivar", Title: "Administrative Assistant", Phone: "(559) 270-7698", Email: "dsaldivar@easycarewater.com"},
-		{Name: "Jennifer Weaver", Title: "Order Processor", Phone: "(805) 901-3953", Email: "jweaver@easycarewater.com"},
+		{Name: "Jennifer Weaver", Title: "Order Processor", Phone: "(805) 901-3953", Email: "orderprocessing@easycarewater.com"},
 	}
 	return convertStruct2Byte(data)
 }

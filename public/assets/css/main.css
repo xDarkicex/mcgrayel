@@ -191,6 +191,11 @@ ol{
 
 	}
 
+.inactiveLink {
+		pointer-events: none;
+		cursor: default;
+ }
+
 .navMaterial button{
 
 		/*width:6em;

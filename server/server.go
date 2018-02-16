@@ -31,15 +31,17 @@ func GetRoutes() *httprouter.Router {
 	application := controllers.Application{}
 	router.GET("/", route(application.Index))
 	router.HEAD("/", route(application.Index))
-	intenernational := controllers.International{}
-	router.GET("/international", route(intenernational.Index))
-	router.GET("/international/greek", route(intenernational.Greek))
 	router.GET("/about-us", route(application.About))
 	router.GET("/order", route(application.Order))
 	router.GET("/contact-us", route(application.Contact))
 	router.POST("/contact-us", route(application.Contact))
 	router.GET("/sds", route(application.SDS))
 	router.GET("/video-tour", route(application.VideoTour))
+
+	intenernational := controllers.International{}
+	router.GET("/international", route(intenernational.Index))
+	router.GET("/international/greek", route(intenernational.Greek))
+	router.GET("/international/russia", route(intenernational.Russia))
 
 	staff := controllers.Staff{}
 	router.GET("/staff", route(staff.Index))

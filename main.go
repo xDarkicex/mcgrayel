@@ -2,8 +2,9 @@ package main
 
 import (
 	"flag"
-	"log"
+	"fmt"
 	"net/http"
+	"time"
 
 	"github.com/xDarkicex/mcgrayel/server"
 )
@@ -18,5 +19,15 @@ func init() {
 func main() {
 	port := flag.String("p", "8000", "port to serve on")
 	flag.Parse()
-	log.Fatal(http.ListenAndServe(":"+*port, Server.Routes))
+	server := &http.Server{
+		Addr:           ":" + *port,
+		Handler:        Server.Routes,
+		ReadTimeout:    10 * time.Second,
+		WriteTimeout:   10 * time.Second,
+		MaxHeaderBytes: 1 << 20,
+	}
+	err := server.ListenAndServe()
+	if err != nil {
+		fmt.Println(err)
+	}
 }
