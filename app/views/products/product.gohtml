@@ -37,6 +37,9 @@
 					<li>{{ $value }}</li>
 				{{ end }}
 					<li><a style="text-transform: capitalize;" href="../static/assets/files/sds-{{.sds}}.pdf">{{.sds}} safety data sheet</a></li>
+				{{if .brochure}}
+					<li><a style="text-transform: capitalize;" href="../static/assets/files/{{.brochure}}.pdf">{{.name}} Brochure</a></li>
+				{{end}}
 				</ul>
 			{{end}}
 		</div>
@@ -123,7 +126,7 @@
 {{template "menu"}}
 	</div>
 
-
+ 
 
 <div class="hide">Icons made by <a href="http://www.flaticon.com/authors/rami-mcmin" title="Rami McMin">Rami McMin</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
 <script src="../static/assets/js/ripple.js" async></script>

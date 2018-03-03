@@ -72,7 +72,8 @@ func setObject(name string) *data {
 				"Easy-to-use, just pour in.",
 				"No Wait, swim immediately after treatment.",
 			},
-			"notice": "For heavily used or commercial pools, use maximum weekly dosage for better results.",
+			"notice":   "For heavily used or commercial pools, use maximum weekly dosage for better results.",
+			"brochure": "Pooltec-2017",
 		}
 	case "algatec":
 		return &data{
@@ -110,7 +111,8 @@ func setObject(name string) *data {
 				"Minimal brushing required for yellow or black algae removal.",
 				"Will not stain pool surface's, swimmer's hair and clothing.",
 			},
-			"notice": "For severe cleanup, use extra chlorine to help remove dead algae.",
+			"notice":   "For severe cleanup, use extra chlorine to help remove dead algae.",
+			"brochure": "Algatec-2018",
 		}
 	case "beautec":
 		return &data{
@@ -152,7 +154,8 @@ func setObject(name string) *data {
 				"Removes existing buildup without costly tile cleaning and acid washing.",
 				"Easy to use, just pour in and swim immediately",
 			},
-			"notice": "",
+			"notice":   "",
+			"brochure": "Beautec-2017",
 		}
 	case "pooltec-winter":
 		return &data{
@@ -231,7 +234,8 @@ func setObject(name string) *data {
 				"Reduces warranty issues, lawsuits, and replastering of damaged pools.",
 				"Swimmers can use pool immediately.",
 			},
-			"summary": "Prevents plus removes plaster dust - Eliminates tedious surface brushing - Significantly reduces surface mottling discoloration - Exposes aggregates brilliantly with less acid",
+			"summary":  "Prevents plus removes plaster dust - Eliminates tedious surface brushing - Significantly reduces surface mottling discoloration - Exposes aggregates brilliantly with less acid",
+			"brochure": "Startup-tec-2017",
 		}
 	case "protec":
 		return &data{

@@ -43,7 +43,9 @@ type ContactForm struct {
 
 //Secret containts password
 type Secret struct {
-	Password string
+	Users []struct {
+		Password string
+	}
 }
 
 //RecaptchaResponse is for google captcha

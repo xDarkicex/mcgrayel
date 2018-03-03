@@ -5,8 +5,13 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"net/mail"
+	"net/smtp"
 	"strconv"
 
+	"github.com/xDarkicex/emailer"
+
+	"github.com/scorredoira/email"
 	"github.com/xDarkicex/mcgrayel/helpers"
 )
 
@@ -52,6 +57,7 @@ func ReadJSON() *helpers.Secret {
 	if err != nil {
 		fmt.Println(err, secret)
 	}
+
 	// fmt.Println(config)
 	err = json.Unmarshal(secret, &data)
 	if err != nil {
@@ -60,65 +66,84 @@ func ReadJSON() *helpers.Secret {
 	return &data
 }
 
-//Note to self add a router for emails
-// example would be code like this
-// whois := a.Request.FormValue("whois")
-// if whois == "orderprocessing" {
-// email jen
-//}
-// if whois == "accounting" {
-// email monica
-//}
-// a switch would be more efficent code
-
 func (this Application) Contact(a helpers.RouterArgs) {
 	if a.Request.Method == "POST" {
-		msg := NewMessage(a)
+		msg := this.NewMessage(a)
 		department, err := strconv.Atoi(msg.Department)
 		if err != nil {
 			log.Println(err)
 		}
 
-		// password := ReadJSON()
+		password := ReadJSON()
 		switch d := department; d {
 		case 1:
-			fmt.Println("Customer Support")
-			// subject := "Contact Request from " + msg.Name
-			// data := "New Contact request from " + msg.Name + "\n" +
-			// 	"Email: " + msg.Email + "\n" +
-			// 	"Phone Number: " + msg.Telephone + "\n" +
-			// 	"Product: " + msg.Product + "\n" +
-			// 	"Contact Message: " + "\n" +
-			// 	msg.Body
-			// m := email.NewMessage(subject, data)
-			// m.From = mail.Address{Name: "Services", Address: "orderprocessing@easycarewater.com"}
-			// m.To = []string{"orderprocessing@easycarewater.com"}
-			// auth := smtp.PlainAuth("", "orderprocessing@easycarewater.com", password.Password, "smtp.gmail.com")
-			// SMTP := "smtp.gmail.com" + ":" + strconv.Itoa(587)
-			// if err := email.Send(SMTP, auth, m); err != nil {
-			// 	fmt.Println(err)
-			// }
+			fmt.Println("incoming email: customerservice@easycarewater.com")
+			subject := "Contact Request from " + msg.Name
+			data := "New Contact request from " + msg.Name + "\n" +
+				"Email: " + msg.Email + "\n" +
+				"Phone Number: " + msg.Telephone + "\n" +
+				"Product: " + msg.Product + "\n" +
+				"Contact Message: " + "\n" +
+				msg.Body
+			m := email.NewMessage(subject, data)
+			m.From = mail.Address{Name: "Services", Address: "customerservice@easycarewater.com"}
+			m.To = []string{"customerservice@easycarewater.com"}
+			auth := smtp.PlainAuth("", "customerservice@easycarewater.com", password.Users[0].Password, "smtp.gmail.com")
+			SMTP := "smtp.gmail.com" + ":" + strconv.Itoa(587)
+			if err := email.Send(SMTP, auth, m); err != nil {
+				fmt.Println(err)
+			}
 		case 2:
-			fmt.Println("Order Processing")
-			// subject := "Contact Request from " + msg.Name
-			// data := "New Contact request from " + msg.Name + "\n" +
-			// 	"Email: " + msg.Email + "\n" +
-			// 	"Phone Number: " + msg.Telephone + "\n" +
-			// 	"Product: " + msg.Product + "\n" +
-			// 	"Contact Message: " + "\n" +
-			// 	msg.Body
-			// m := email.NewMessage(subject, data)
-			// m.From = mail.Address{Name: "Services", Address: "orderprocessing@easycarewater.com"}
-			// m.To = []string{"orderprocessing@easycarewater.com"}
-			// auth := smtp.PlainAuth("", "orderprocessing@easycarewater.com", password.Password, "smtp.gmail.com")
-			// SMTP := "smtp.gmail.com" + ":" + strconv.Itoa(587)
-			// if err := email.Send(SMTP, auth, m); err != nil {
-			// 	fmt.Println(err)
-			// }
+			fmt.Println("incoming email: orderprocessing@easycarewater.com")
+			subject := "Contact Request from " + msg.Name
+			data := "New Contact request from " + msg.Name + "\n" +
+				"Email: " + msg.Email + "\n" +
+				"Phone Number: " + msg.Telephone + "\n" +
+				"Product: " + msg.Product + "\n" +
+				"Contact Message: " + "\n" +
+				msg.Body
+			m := email.NewMessage(subject, data)
+			m.From = mail.Address{Name: "Services", Address: "orderprocessing@easycarewater.com"}
+			m.To = []string{"orderprocessing@easycarewater.com"}
+			auth := smtp.PlainAuth("", "orderprocessing@easycarewater.com", password.Users[1].Password, "smtp.gmail.com")
+			SMTP := "smtp.gmail.com" + ":" + strconv.Itoa(587)
+			if err := email.Send(SMTP, auth, m); err != nil {
+				fmt.Println(err)
+			}
 		case 3:
-			fmt.Println("Water treatment")
+			//IWT = Industrial water treatment email handler
+			IWT := emailer.NewEmailer()
+			IWT.Name, IWT.Email, IWT.Username, IWT.Password, IWT.SMTP, IWT.Port = "Industrial Water Treatment", "xdarkicex@gmail.com", "xdarkicex",
+				password.Users[2].Password, "smtp.gmail.com", "587"
+			err := IWT.LoadTemplate("app/views/emails/EasyCareContact.html", map[string]string{
+				"Body":    msg.Body,
+				"Name":    msg.Name,
+				"Email":   msg.Email,
+				"Phone":   msg.Telephone,
+				"Product": msg.Product,
+			})
+			if err != nil {
+				fmt.Println(err)
+			}
+			IWT.SendHTML()
 		case 4:
-			fmt.Println("Web Master")
+			fmt.Println("incoming email: xdarkicex@gmail.com")
+			subject := "Contact Request from " + msg.Name
+			data := "New Contact request from " + msg.Name + "\n" +
+				"Email: " + msg.Email + "\n" +
+				"Phone Number: " + msg.Telephone + "\n" +
+				"Product: " + msg.Product + "\n" +
+				"Contact Message: " + "\n" +
+				msg.Body
+			m := email.NewMessage(subject, data)
+			m.From = mail.Address{Name: "Services", Address: "xdarkicex@gmail.com"}
+			m.To = []string{"xdarkicex@gmail.com"}
+			auth := smtp.PlainAuth("", "xdarkicex", password.Users[2].Password, "smtp.gmail.com")
+			SMTP := "smtp.gmail.com" + ":" + strconv.Itoa(587)
+			fmt.Println(SMTP, auth, m)
+			if err := email.Send(SMTP, auth, m); err != nil {
+				fmt.Println(err)
+			}
 		}
 	}
 	data := map[string]interface{}{}
@@ -229,7 +254,7 @@ func loadSDSSheet(name string) *data {
 // Telephone
 // Product
 // Body
-func NewMessage(a helpers.RouterArgs) *helpers.ContactForm {
+func (this *Application) NewMessage(a helpers.RouterArgs) *helpers.ContactForm {
 	return &helpers.ContactForm{
 		Department: a.Request.FormValue("department"),
 		Name:       a.Request.FormValue("name"),
