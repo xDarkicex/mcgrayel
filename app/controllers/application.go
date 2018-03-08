@@ -12,6 +12,7 @@ import (
 	"github.com/xDarkicex/emailer"
 
 	"github.com/scorredoira/email"
+	t "github.com/xDarkicex/mcgrayel/app/templates"
 	"github.com/xDarkicex/mcgrayel/helpers"
 )
 
@@ -115,7 +116,7 @@ func (this Application) Contact(a helpers.RouterArgs) {
 			IWT := emailer.NewEmailer()
 			IWT.Name, IWT.Email, IWT.Username, IWT.Password, IWT.SMTP, IWT.Port = "Industrial Water Treatment", "xdarkicex@gmail.com", "xdarkicex",
 				password.Users[2].Password, "smtp.gmail.com", "587"
-			err := IWT.LoadTemplate("app/views/emails/EasyCareContact.html", map[string]string{
+			err := IWT.LoadTemplate(t.Default, map[string]string{
 				"Body":    msg.Body,
 				"Name":    msg.Name,
 				"Email":   msg.Email,
@@ -127,23 +128,21 @@ func (this Application) Contact(a helpers.RouterArgs) {
 			}
 			IWT.SendHTML()
 		case 4:
-			fmt.Println("incoming email: xdarkicex@gmail.com")
-			subject := "Contact Request from " + msg.Name
-			data := "New Contact request from " + msg.Name + "\n" +
-				"Email: " + msg.Email + "\n" +
-				"Phone Number: " + msg.Telephone + "\n" +
-				"Product: " + msg.Product + "\n" +
-				"Contact Message: " + "\n" +
-				msg.Body
-			m := email.NewMessage(subject, data)
-			m.From = mail.Address{Name: "Services", Address: "xdarkicex@gmail.com"}
-			m.To = []string{"xdarkicex@gmail.com"}
-			auth := smtp.PlainAuth("", "xdarkicex", password.Users[2].Password, "smtp.gmail.com")
-			SMTP := "smtp.gmail.com" + ":" + strconv.Itoa(587)
-			fmt.Println(SMTP, auth, m)
-			if err := email.Send(SMTP, auth, m); err != nil {
+			//Web Developer email handler
+			WD := emailer.NewEmailer()
+			WD.Name, WD.Email, WD.Username, WD.Password, WD.SMTP, WD.Port = "Web Development Easycare Water", "xdarkicex@gmail.com", "xdarkicex",
+				password.Users[2].Password, "smtp.gmail.com", "587"
+			err := WD.LoadTemplate(t.Default, map[string]string{
+				"Body":    msg.Body,
+				"Name":    msg.Name,
+				"Email":   msg.Email,
+				"Phone":   msg.Telephone,
+				"Product": msg.Product,
+			})
+			if err != nil {
 				fmt.Println(err)
 			}
+			WD.SendHTML()
 		}
 	}
 	data := map[string]interface{}{}
